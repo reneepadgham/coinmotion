@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            Coinmotion: Buy, store and use Bitcoins with ease
+        </title>
+        <meta name="description" content="Coinmotion provides a fast and secure platform for buying, storing and using bitcoins." />
+        <meta name="keywords" content="" />
+        <!-- <link type="image/x-icon" rel="shortcut icon" href="/favicon.ico" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=4, minimum-scale=1, user-scalable=yes" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css" type="text/css">
+
+       <!-- <script type="text/javascript" src="/frontend-framework/lib/jquery-2.1.1.min.js">
+</script>
+        <script type="text/javascript" src="/frontend-framework/lib/jquery-migrate-1.2.1.min.js">
+</script>
+        <script type="text/javascript" src="/frontend-framework/lib/respond.js/respond.min.js">
+</script>
+        <script type="text/javascript" src="/frontend-framework/lib/modernizr.custom.65175.js">
+</script>
+        <script type="text/javascript" src="/frontend-framework/js/jquery.wff.logger.js">
+</script>
+        <script type="text/javascript" src="/frontend-framework/lib/pickadate/legacy.js">
+</script>
+        <script type="text/javascript" src="/frontend-framework/lib/pickadate/picker.js">
+</script>
+        <script type="text/javascript" src="/frontend-framework/lib/pickadate/picker.date.js">
+</script>
+        <script type="text/javascript" src="/themes/coinmotion/js/site.js">
+</script>
+        <script type="text/javascript" src="/js/autoform.js">
+</script>-->
+    </head>
+
+<header>
+
+    <nav>
+            <ul class="main-nav">
+                <li class="logo-area"><img src="img/logowhite.png" alt="logo" class="logo"></li>
+                <ul class="main-links">
+                    <li><a href="">Wallet</a></li>
+                    <li><a href="">Merchant</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Tools</a></li>
+                    <li><a href="">About</a></li>
+                    <li><button class="login"><a href="">Log-out</a></button></li>
+                </ul>
+            </ul>
+        
+    </nav>
+
+</header>
+
+
+<body>
+
+<div class="top-box">
+    <div class="btc-ticker">
+        <span id="ask_price" class="value">306.49 € / 1 BTC</span>
+    </div>
+    <div class="send">
+        <form class="form autoform" id="form-withdraw" action="" method="post">
+            Send <input type="text" name="amount" id="input-amount" class="amount" placeholder=".25"> btc to <input type="text" name="btc_address" id="input-btc-address" class="address" placeholder="1JuBoovp6uNVZETadvBzCTTDCaNJCKcz16">
+            <button id="button-submit" name="send" type="submit" class="send-btc">Go</button>
+        </form>
+    </div>
+    <div class ="top-buttons">
+        <a href="#"><img src="img/notificationbell.png" class="notifications" id="notifications" alt="notifications"></a>
+        <a href="#"><img src="img/settings.png" class="settings" id="settings" alt="settings"></a>
+    </div>
+    <div class="show-conversion">
+        <span class="converted">≈ 0.00 €</span>
+    </div>
+</div>
+
+<div class="border"></div>
+<!--PUT REFERALL AND NOTIFICATIONS/SETTINGS HERE-->
+
+    <div class="info-box">
+
+        <div class="control-panel">
+            <div class="welcome-message">
+                <img src="img/tom.jpg" class="profile-image">
+                <h2>Welcome <span class="user-name">Tom</span>!</h2>
+                <!--add progress bar here-->
+            </div>
+            <ul class="objectives">
+                  <li>
+                    <a href="">
+                        <p class="task">Add email address</p>
+                        <p class="points">(1 pt)</p>
+                        <img src="img/rightarrow.png">
+                    </a>
+                  </li>
+                  <hr>
+                  <li>
+                    <a href="">
+                        <p class="task">Add billing address</p>
+                        <p class="points">(1 pt)</p>
+                        <img src="img/rightarrow.png">
+                    </a>
+                  </li>
+                  <hr>
+                  <li>
+                    <a href="">
+                        <p class="task">Share your wallet</p>
+                        <p class="points">(1 pt)</p>
+                        <img src="img/rightarrow.png">
+                    </a>
+                  </li>
+                  <hr>
+                  <li>
+                    <a href="">
+                        <p class="task">Jumio id verification</p>
+                        <p class="points">(5 pt)</p>
+                        <img src="img/rightarrow.png">
+                    </a>
+                  </li>
+            </ul>
+        </div>
+
+        <div class="balances" id="balances">
+            <div class="view-selectors">
+                <h1>Balances</h1>
+            </div>
+            <div class="block account btc" id="btc-balance">
+                <ul id="viewtoggle">
+                    <li id="btc"><a href="#">btc</a></li>
+                    <li id="euro"><a href="#">euro</a></li>
+                </ul>
+                <div class="balance">
+                    <span id="bal_btc" class="value">2.27</span>
+                    <h2 class="type btc">BTC</h2>
+                    <span class="converted">≈ 0.00 €</span>
+                </div>
+                <div class="btc-buttons">
+                    <button id="btc-buy">Buy</button>
+                    <button id="btc-sell">Sell</button>
+                </div>
+            </div>
+            <div class="block account euro" id="euro-balance">
+                <ul id="viewtoggle">
+                    <li id="btc"><a href="#">btc</a></li>
+                    <li id="euro"><a href="#">euro</a></li>
+                </ul>
+                <div class="balance">
+                    <span id="bal_euro" class="value">85.00</span>
+                    <h2 class="type-euro">euro</h2>
+                    <span class="converted">≈ 0.00000000 BTC</span>
+                </div>
+                <div class="euro-buttons">
+                    <button id="euro-deposit">Deposit</button>
+                    <button id="euro-withdrawal">Withdrawal</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="wallet">
+            <div class="qr">
+                <img src="img/qrcode.png" alt="wallet" id="wallet-qr">
+            </div>
+            <div id="wallet-info">
+                <p id="wallet-name">Main Wallet</p>
+                <p id="wallet-balance">0.0023 BTC</p>
+                <span class="btc-address" id="btc-address">1JuBoovp6uNVZETadvBzCTTDCaNJCKcz16</span>
+                <button id="share-wallet">Share</button>
+            </div>
+            <div class="social-share">
+                <a href="http://www.facebook.com/share.php?u=www.coinmotion.com&title=My btc wallet is:" target="_blank">
+                    <img src="img/facebook.png" class="share-icon facebook">
+                </a>
+                <a href="http://twitter.com/home?status=Send me btc at:+www.coinmotion.com" target="_blank">
+                    <img src="img/twitter.png" class="share-icon twitter">
+                </a>
+                <a href="mailto:?subject=Send me btc!&body=Check out this site I came across www.coinmotion.com" target="_blank">
+                    <img src="img/mail.png" class="share-icon mail">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+        <div class="bottom-box">
+            <div class="field transactions" id="transactions">
+                <table class="table transactions table-responsive" summary="">
+                        <h1>Recent Transactions</h1>
+                        <div class="transaction-border"></div>
+                    <tbody>
+                        <tr class="transaction-info">
+                            <td class="direction">Sent</td>
+                            <td class="transaction-amount">0.125 BTC</td>
+                            <td class="to-from">to</td>
+                            <td class="account-address">1JuBoovp6uNVZETadvBzCTTDCaNJCKcz16</td>
+                            <td class="time-passed">2 days ago</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+        </div>
+
+
+
+<!-- <div id="share">
+    <img src="img/qrcode.png" alt="wallet" id="wallet-qr">
+    <span class="btc-address">1JuBoovp6uNVZETadvBzCTTDCaNJCKcz16</span>
+</div>
+ -->
+
+
+<div id="buy-btc">
+
+<section class="block quick-buy">
+    <form class="form autoform" id="form-buy" action="/en/buy?ajax_content=true#buy" method="post">
+        <div class="grid-1">
+            <div class="col-1">
+                <div class="field form-field latest-price">
+                    <label class="form-label">Latest price</label>
+                    <div class="special-value">
+                        <span class="original" id="ask">304.44 € / 1 BTC</span>
+                    </div>
+                </div>
+                <div class="field form-field available">
+                    <label class="form-label">Available</label>
+                    <div class="special-value">
+                        <span class="original" id="avl_cur">0.00 €</span> <span class="converted" id="cnva_btc">≈ 0.00000000 BTC</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="field form-field amount">
+                    <input type="text" name="amount" id="input-amount" value="" class="input" placeholder="1.025" /> <select name="currency" id="select-status" class="select">
+                        <option value="btc" selected="selected">
+                            BTC
+                        </option>
+                        <option value="eur">
+                            €
+                        </option>
+                    </select>
+                </div>
+                <div class="field form-field calculation">
+                    <div class="field form-field calculation">
+                        <table summary="">
+                            <tbody>
+                                <tr class="amount">
+                                    <th>
+                                        Amount
+                                    </th>
+                                    <td id="btc">
+                                        0.00000000 BTC
+                                    </td>
+                                </tr>
+                                <tr class="subtotal">
+                                    <th>
+                                        Sum
+                                    </th>
+                                    <td id="amt">
+                                        0.00 €
+                                    </td>
+                                </tr>
+                                <tr class="commission-fee">
+                                    <th>
+                                        Commission fee
+                                    </th>
+                                    <td id="fee">
+                                        0.00 €
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="total">
+                                    <th>
+                                        Total
+                                    </th>
+                                    <td id="tot">
+                                        0.00 €
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field form-field submit">
+            <input class="button" id="button-submit" name="buy" type="submit" value="Buy" />
+        </div><input type="hidden" name="buy" value="true" />
+    </form>
+</section>
+
+</div>
+
+<div id="sell-btc">
+<section class="block quick-sell">
+    <form class="form autoform" id="form-sell" action="/en/sell?ajax_content=true#sell" method="post">
+        <div class="grid-1">
+            <div class="col-1">
+                <div class="field form-field latest-price">
+                    <label class="form-label">Latest price</label>
+                    <div class="special-value">
+                        <span class="original" id="bid">296.91 € / 1 BTC</span>
+                    </div>
+                </div>
+                <div class="field form-field available">
+                    <label class="form-label">Available</label>
+                    <div class="special-value">
+                        <span class="original" id="avl_btc">0.00000000 BTC</span> <span class="converted" id="cnvb_cur">≈ 0.00 €</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="field form-field amount">
+                    <label class="form-label" for="input-amount"></label> <input type="text" name="amount" id="input-amount" value="" class="input" placeholder="110.05"/> <select name="currency" id="select-status" class="select">
+                        <option value="btc">
+                            BTC
+                        </option>
+                        <option value="eur" selected="selected">
+                            €
+                        </option>
+                    </select> 
+                </div>
+                <div class="field form-field calculation">
+                    <div class="field form-field calculation">
+                        <table summary="">
+                            <tbody>
+                                <tr class="amount">
+                                    <th>
+                                        Amount
+                                    </th>
+                                    <td id="btc">
+                                        0.00000000 BTC
+                                    </td>
+                                </tr>
+                                <tr class="subtotal">
+                                    <th>
+                                        Sum
+                                    </th>
+                                    <td id="amt">
+                                        0.00 €
+                                    </td>
+                                </tr>
+                                <tr class="commission-fee">
+                                    <th>
+                                        Commission fee
+                                    </th>
+                                    <td id="fee">
+                                        0.00 €
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="total">
+                                    <th>
+                                        Total
+                                    </th>
+                                    <td id="tot">
+                                        0.00 €
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field form-field submit">
+            <input class="button" id="button-submit" name="sell" type="submit" value="Sell" />
+        </div><input type="hidden" name="sell" value="true" />
+    </form>
+</section>
+</div>
+
+
+
+
+
+
+<div id ="deposit-euro">
+
+<section class="block deposit-details">
+    <div class="field body">
+        <p>
+            Deposit funds on to your Coinmotion account via SEPA transfer (whole SEPA region) or instantly using Maksukaista (Finland) or SOFORT Banking (Austria, Belgium, France, Germany, Hungary, Italy, Netherlands, Poland, Spain and Switzerland)
+        </p>
+    </div>
+    <div class="field actions">
+        <h4>
+            Choose a payment method
+        </h4>
+        <p>
+            <a id="button-payment-sepa" class="button-logo" href="#"><img src="img/logo-payment-sepa.png" alt="SEPA" title="SEPA" /></a> <a id="button-payment-pbw" class="button-logo" href="#"><img src="img/logo-payment-maksukaista.png" alt="Maksukaista" title="Maksukaista" /></a> <a id="button-payment-sofort" class="button-logo" href="#"><img src="img/logo-payment-sofort.png" alt="Sofort" title="Sofort" /></a>
+        </p>
+    </div><a name="deposit_pbw"></a>
+    <div class="wrapper payment-pbw">
+        <form class="form autoform" id="form-deposit-pbw" action="/en/deposit?ajax_content=true#deposit_pbw" method="post">
+            <div class="field form-field amount">
+                <label class="form-label" for="input-amount-pbw">Amount *</label> <input type="text" name="amount_cur" id="input-amount-pbw" value="" class="input" /> <span class="converted" id="cnv-pbw">€ ≈ 0.00000000 BTC</span>
+            </div>
+            <div class="controls">
+                <div class="field form-field submit">
+                    <input class="button" name="deposit_pbw" type="submit" value="Proceed to payment" />
+                </div><input type="hidden" name="deposit_pbw" value="true" /><input type="hidden" name="MERCHANT_ID" value="" /><input type="hidden" name="AMOUNT" value="" /><input type="hidden" name="CURRENCY" value="EUR" /><input type="hidden" name="ORDER_NUMBER" value="" /><input type="hidden" name="LANG" value="EN" /><input type="hidden" name="EMAIL" value="chelsea@padgham.com" /><input type="hidden" name="RETURN_ADDRESS" value="https://coinmotion.com/en/deposit" /><input type="hidden" name="CANCEL_ADDRESS" value="https://coinmotion.com/en/deposit" /><input type="hidden" name="SELECTED" value="BANKS" /><input type="hidden" name="AUTHCODE" value="" />
+            </div>
+        </form>
+    </div><a name="deposit_sofort"></a>
+    <div class="wrapper payment-sofort">
+        <form class="form autoform" id="form-deposit-sofort" action="/en/deposit?ajax_content=true#deposit_sofort" method="post">
+            <p class="dim">
+                Sofort Banking has a 2 % processing fee.
+            </p>
+            <div class="field form-field amount">
+                <label class="form-label" for="input-amount-sofort">Amount *</label> <input type="text" name="amount_cur" id="input-amount-sofort" value="" class="input" /> <span class="converted" id="cnv-sofort">€ ≈ 0.00000000 BTC</span>
+            </div>
+            <div class="controls">
+                <div class="field form-field submit">
+                    <input class="button" name="deposit_sofort" type="submit" value="Proceed to payment" />
+                </div><input type="hidden" name="deposit_sofort" value="true" /><input type="hidden" name="RETURN_ADDRESS" value="https://coinmotion.com/en/deposit" /><input type="hidden" name="CANCEL_ADDRESS" value="https://coinmotion.com/en/deposit" />
+            </div>
+        </form>
+    </div><a name="deposit_bank"></a>
+    <div class="wrapper payment-sepa">
+        <form class="form autoform" id="form-deposit-bank" action="/en/deposit?ajax_content=true#deposit_bank" method="post">
+            <div class="field form-field amount">
+                <label class="form-label" for="input-amount-bank-transfer">Amount *</label> <input type="text" name="amount" id="input-amount-bank-transfer" value="" class="input" /> <span class="converted" id="cnv-bank-transfer">€ ≈ 0.00000000 BTC</span>
+            </div>
+            <div class="controls">
+                <div class="field form-field submit">
+                    <input class="button" name="deposit_bank" type="submit" value="Make payment" />
+                </div><input type="hidden" name="deposit_bank" value="true" />
+            </div>
+        </form>
+    </div><a name="deposit_bank_ready"></a>
+    <div class="wrapper payment-sepa-ready">
+        <form class="form autoform" id="form-deposit-bank-ready" action="/en/deposit?ajax_content=true#deposit_bank_ready" method="post">
+            <div class="field form-field bank-account">
+                <label class="form-label">Recipient's account number OP-Pohjola</label>
+                <div class="form-value">
+                    <div class="iban">
+                        IBAN: FI95 5780 3820 0954 86
+                    </div>
+                    <div class="bic">
+                        BIC: OKOYFIHH
+                    </div>
+                </div>
+            </div>
+            <div class="field form-field receiver">
+                <label class="form-label">Recipient</label>
+                <div class="form-value">
+                    Coinmotion Oy
+                </div>
+            </div>
+            <div class="field form-field receiver">
+                <label class="form-label">Recipient's address</label>
+                <div class="form-value">
+                    Hiomotie 19, 00380 Helsinki
+                </div>
+            </div>
+            <div class="field form-field receiver">
+                <label class="form-label">Recipient's country</label>
+                <div class="form-value">
+                    Finland
+                </div>
+            </div>
+            <div class="field form-field reference-number">
+                <label class="form-label">Reference</label>
+                <div class="form-value">
+                    100 29958
+                </div>
+                <div class="form-hint">
+                    If reference number is not supported use message field
+                </div>
+            </div>
+            <div class="field form-field amount">
+                <label class="form-label" for="input-amount-bank-transfer-ready">Amount</label>
+                <div class="form-value" id="input-amount-bank-transfer-ready">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="field form-field deadline">
+                <label class="form-label">Due date</label>
+                <div class="form-value">
+                    20.10.2014
+                </div>
+            </div>
+            <p class="dim">
+                SEPA transfers are processed within one day once the funds arrive.
+            </p>
+        </form>
+    </div>
+    </section>
+
+</div>
+
+
+
+
+
+<div id="withdrawal-euro">
+    <section id="system-messages-withdraw" class="block block-system-messages">
+        <div class="system-message information">
+            To withdraw funds, you need to <a href="/en/identify">verify your identity</a>
+        </div>
+    </section>
+    <section class="block withdraw-details">
+        <div class="field body">
+            <p>
+                You can withdraw funds in euros to a confirmed bank account.
+            </p>
+            <p>
+                Withdrawals are processed during the next banking day. Depending on your bank a withdrawal can take 1-3 banking days.
+            </p>
+        </div>
+        <div class="field form-field bank-account">
+            <span class="form-label">Bank account</span>
+            <div class="form-value">
+                <div class="iban">
+                    You have not set a bank account
+                </div><a class="link-change" href="/en/bank_account">Change bank account</a>
+            </div>
+        </div><a name="withdraw"></a>
+        <form class="form autoform" id="form-withdraw" action="/en/withdraw?ajax_content=true#withdraw" method="post">
+            <div class="field form-field available">
+                <label class="form-label">Available</label>
+                <div class="special-value">
+                    <span class="original" id="avl_cur">0.00 €</span> <span class="converted" id="cnva_btc">≈ 0.00000000 BTC</span>
+                </div>
+            </div>
+            <div class="field form-field transaction-fee">
+                <label class="form-label">Withdraw fee</label>
+                <div class="special-value">
+                    <span class="original">0.90 €</span>
+                </div>
+            </div>
+            <div class="field form-field amount">
+                <input type="text" name="amount" id="input-amount" value="" class="input" /> <span class="converted" id="cnv">€ ≈ 0.00000000 BTC</span>
+            </div>
+            <div class="field form-field submit">
+                <input class="button" name="withdraw" type="submit" value="Withdraw" id="button-submit"/>
+            </div><input type="hidden" name="withdraw" value="true" />
+        </form>
+    </section>
+
+</div>
+
+
+
+
+
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/jquery.simplemodal.1.4.4.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {        
+            $('#viewtoggle > li').click(function() {
+            var ix = $(this).index();
+
+            $('#btc-balance').toggle( ix === 0 );
+            $('#euro-balance').toggle( ix === 1 );
+        });   
+        });
+    </script> 
+
+    <script>
+        $(document).ready(function() {
+        $('#btc-buy').bind('click', function(e) {
+            e.preventDefault(); 
+
+            console.log("clicked");
+
+            $('#buy-btc').modal({
+                minHeight:325,
+                minWidth: 325,
+                overlayClose:true
+            });
+
+            console.log("loaded");
+
+        });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+        $('#btc-sell').bind('click', function(e) {
+            e.preventDefault(); 
+
+            console.log("clicked");
+
+            $('#sell-btc').modal({
+                minHeight:325,
+                minWidth: 325,
+                overlayClose:true
+            });
+
+            console.log("loaded");
+
+        });
+        });
+    </script>
+
+
+    <script>
+        $(document).ready(function() {
+        $('#euro-deposit').bind('click', function(e) {
+            e.preventDefault(); 
+
+            console.log("clicked");
+
+            $('#deposit-euro').modal({
+                minHeight:325,
+                minWidth: 325,
+                overlayClose:true
+            });
+
+            console.log("loaded");
+
+        });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+        $('#euro-withdrawal').bind('click', function(e) {
+            e.preventDefault(); 
+
+            console.log("clicked");
+
+            $('#withdrawal-euro').modal({
+                minHeight:325,
+                minWidth: 325,
+                overlayClose:true
+            });
+
+            console.log("loaded");
+
+        });
+        });
+    </script>
+
+
+    <script>
+        $(document).ready(function() {
+            $("input[name='amount']").click(function(e) {
+                $(".show-conversion").toggle();
+                e.stopPropagation();
+            });
+
+            $(document).click(function(e) {
+                if (!$(e.target).is('.show-conversion, .show-conversion *')) {
+                    $(".show-conversion").hide();
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('#share-wallet').click(function(e) {
+                $(".social-share").toggle();
+                $("#share-wallet").hide();
+                e.stopPropagation();
+            });
+
+            $(document).click(function(e) {
+                if (!$(e.target).is('.social-share, .social-share *')) {
+                    $(".social-share").hide();
+                    $("#share-wallet").show();
+                }
+            });
+        });
+    </script>
+
+    <script>
+        var bitID = document.getElementById("btc-address");
+    </script>
+
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+</body>
+
+
+
+
+
+

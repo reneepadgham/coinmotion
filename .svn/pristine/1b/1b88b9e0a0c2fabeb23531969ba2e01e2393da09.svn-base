@@ -1,0 +1,51 @@
+@media screen and (max-width: 1120px) {
+
+
+	.send {
+		font-size: .85em;
+	}
+
+	.address {
+		width: auto;
+	}
+
+	.wallet {
+		width: 21%;
+	}
+
+	.balances {
+		width: 35%;
+	}
+
+	.control-panel {
+		width: 25%;
+	}
+
+	.info-box {
+		width: 90%;
+	}
+
+	.border, .bottom-box {
+		width: 85%;
+	}
+
+
+	.control-panel {
+		padding-left: 6%;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.top-buttons {
+		display: none;
+	}
+
+	.top-box {
+		height: 25px;
+	}
+
+	.send {
+		width:80%;
+		float: right;
+	}
+}

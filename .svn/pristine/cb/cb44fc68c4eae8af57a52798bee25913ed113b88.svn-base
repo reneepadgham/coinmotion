@@ -1,0 +1,40 @@
+var express = require('express');
+var app = express();
+var fs = require('fs');
+
+app.use(express.static(__dirname));
+
+app.get('/', function (req, res) {
+  var pageContent = fs.readFileSync('./wallet.html', "utf8");
+  res.send(pageContent);
+});
+
+app.get('/dummy-data', function (req, res) {
+	res.send({
+		message: 'It worked!'
+	});
+});
+
+app.get('/next-steps', function (req, res) {
+	setTimeout(function () {
+	res.send([
+		{
+			step: 'ENTER_EMAIL',
+			points: 4
+		},
+		{
+			step: 'BUY_KASPER_BEER',
+			points: 1000
+		}
+	]);
+	}, 3000);
+});
+
+var server = app.listen(3000, function () {
+
+  var host = server.address().address;
+  var port = server.address().port;
+
+  console.log('Example app listening at http://%s:%s', host, port);
+
+});

@@ -1,0 +1,1477 @@
+/****************************
+		GENERAL
+****************************/
+
+
+
+header, body, h1, h2, h3, h4, p, nav, a, button {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+}
+
+h1 {
+	font-weight: 400;
+	font-size: 1.5em;
+	display: block;
+	margin: auto auto;
+	color: #363f54;
+}
+
+
+a {
+	font-weight: 300;
+	color: #886fad;
+}
+
+
+button, .button {
+	background: transparent;
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: #886fad;
+	border-style: solid;
+	padding: 5px 1%;
+	color: #886fad;
+}
+
+.button:hover {
+	background: #886fad;
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: #886fad;
+	border-style: solid;
+	padding: 5px 1%;
+	color: #fff;
+}
+
+
+
+.border {
+	position: relative;
+	width: 80%;
+  	height: 2px;
+  	margin: 20px auto;
+  	background: -webkit-linear-gradient(left, #886fad, #47ACFB); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(right, #886fad, #47ACFB); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(right, #886fad, #47ACFB); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(to right, #886fad, #47ACFB); /* Standard syntax */
+}
+
+::-webkit-input-placeholder {
+   color: #AAAAAB;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #AAAAAB;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #AAAAAB;  
+}
+
+:-ms-input-placeholder {  
+   color: #AAAAAB;  
+}
+
+
+/****************************
+		LOG-IN
+****************************/
+
+article.block.article.article-full-main {
+	text-align: center;
+	padding-top: 75px;
+}
+
+div.field.form-field.email, 
+div.field.form-field.password,
+div.field.form-field.submit  {
+	padding: 15px;
+}
+
+
+
+/****************************
+		NAVIGATION
+****************************/
+
+
+
+nav {
+	width: 80%;
+	padding: 18px 0;
+	margin: auto auto;
+}
+
+nav ul li {
+	list-style: none;
+	display: inline-block;
+	width: auto
+}
+
+.main-nav {
+	background-color: #726499;
+	width: 100%;
+	height: 55px;
+	margin: auto auto;
+	position: absolute;
+	z-index: 1;
+	top:0;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+	padding: 0 12px;
+	font-weight: 300;
+	font-size: .8em;
+	text-transform: uppercase;
+	width: auto;
+}
+
+nav a:hover {
+	font-weight: 600;
+}
+
+nav button {
+	background: none;
+	border-style: none;
+	padding: 4% 0;
+	width: 80px;
+}
+
+nav ul .main-nav {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	padding-left: 0;
+	margin: auto auto;
+	vertical-align: middle;
+}
+
+.logo-area {
+	width: 143px;
+	float: left;
+	padding-left: 10px;
+	margin-top: -3px;
+}
+
+.logo {
+	display: inline-block;
+	width: 100%;
+	vertical-align: middle;
+	height: 20px;
+}
+
+.main-links {
+	float: right;
+	padding-right: 10px;
+	margin-top: 1px;
+	width: auto;
+}
+
+.nav-messages {
+	display: none;
+}
+
+.nav-settings {
+	display: none;
+}
+
+#mobile-header {
+	display:none;
+}
+
+
+#walletpage #walletnav
+{
+	font-weight: 600;
+}
+
+
+/****************************
+		WALLET PAGE
+****************************/
+
+
+
+
+
+	/****************************
+			TOP BOX
+	****************************/
+
+
+
+	.top-box {
+		max-width: 80%;
+		display: block;
+		position: relative;
+		padding-top: 95px;
+		margin: auto auto;
+	}
+
+
+	.page-divider {
+		width: 80%;
+		margin: 15px auto;
+	}
+
+	.send {
+		color: #626262;
+		text-transform: uppercase;
+		font-size: .85em;
+		width: 60%;
+		margin: auto auto;
+		float: left;
+		text-align: center;
+	}
+
+	.amount {
+		width: 80px;
+		border-radius: 5px;
+		border-style: solid;
+		border-color: #9c9fa1;
+		border-width: 1px;
+		text-align: center;
+		margin: 0 5px;
+	}
+
+	.address {
+		width: 300px;
+		border-radius: 5px;
+		border-style: solid;
+		border-color: #9c9fa1;
+		border-width: 1px;
+		text-align: center;
+		margin: 0 5px;
+	}
+
+	.send-btc {
+		background: transparent;
+		border-radius: 5px;
+		border-width: 1px;
+		border-color: #47ACFB;
+		border-style: solid;
+		padding: 3px 20px;
+		color: #47ACFB;
+		margin-left: 10px;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+	.send-btc:hover {
+		background: #47ACFB;
+		color: #fff;
+	}
+
+	.top-buttons {
+		width: 20%;
+		display: inline-block;
+		text-align: center;
+		margin-top: 3px;
+	}
+
+	.top-buttons img {
+		padding: 0 4%;
+	}
+
+	.messages {
+		width: 50%;
+	}
+
+	.settings {
+		width: 40%;
+	}
+
+	#ask_price {
+		font-size: 1.1em;
+		color: #626262;
+	}
+
+	.btc-ticker {
+		width: 20%;
+		display: inline-block;
+		float: left;
+		text-align: center;
+		margin-top: 1px;
+	}
+
+	.show-conversion {
+		width: 20%;
+		display: block;
+		margin: auto auto;
+		text-align: center;
+		margin-bottom: -20px;
+		display: none;
+	}
+
+	.show-conversion .converted {
+		color: #363f54;
+	}
+
+	.send-alert-message {
+		text-align: center;
+		width: 50%;
+		margin: auto auto;
+		border-radius: 5px;
+		position: absolute;
+		margin-left: 25%;
+		margin-bottom: 15px;
+	}
+
+
+	.yellow {
+		background-color: #FFE397;
+		border-radius: 5px;
+		display: none;
+	}
+
+	.message-icon, .settings-icon {
+		display: inline-block;
+		width: 25%;
+		position: relative;
+	}
+
+	.unread-messages {
+		position: absolute;
+		background: #DB776D;
+		border-radius: 50%;
+		width: 17px;
+		height: 17px;
+		color: #fff;
+		font-size: .75em;
+		top: -7px;
+		right: 7px;
+	}
+
+	.mobile-send {
+		width: 80%;
+		position: relative;
+		margin: auto auto;
+		text-align: center;
+		display: none;
+	}
+
+	.mobile-send button {
+		background: #726499;
+		color: #fff;
+		width: 40%;
+		border-color: #726499;
+		text-transform: uppercase;
+		text-align: center;
+		position: relative;
+		margin-top: 5px;
+		display: block;
+		z-index: 100;
+		float: none;
+		margin: auto;
+		margin-top: 10px;
+		margin-bottom: -5
+	}
+
+	.mobile-submit-buttons #btc-button-submit,
+	.mobile-submit-buttons #btc-button-submit-mobile,
+	.mobile-submit-buttons #btc-button-cancel{
+		background: #726499;
+		color: #fff;
+		width: 30%;
+		border-color: #726499;
+		text-transform: uppercase;
+		text-align: center;
+		position: relative;
+		margin-top: 20px;
+		display: inline-block;
+		z-index: 100;
+		float: none;
+		font-weight: 400;
+		padding: 3px 0;
+	}
+
+
+	.mobile-send-form {
+		background: #fff;
+		position: absolute;
+		width: 150%;
+		z-index: 100;
+		margin-left: -25%;
+		display: block;
+		float: none;
+	}
+
+	.mobile-send-form .mobile-send-amount {
+		width: 185px;
+		display: block;
+		padding: 10px;
+		padding-top: 40px;
+		text-align: left;
+		margin: auto auto;
+	}
+
+	.mobile-send-amount .amount {
+		width: 100px;
+	}
+
+	.mobile-send-form .address {
+		width: 300px;
+		font-size: .85em;
+	}
+
+	.mobile-send .amount {
+		width: 64%;
+		font-size: .85em;
+	}
+
+	.mobile-send-form {
+		display: none;
+	}
+
+	.mobile-submit-buttons {
+		width: 100%;
+	}
+
+	.mobile {
+		display: block;
+		height: 160px;
+		display: none;
+	}
+
+
+
+	/****************************
+			INFO BOX
+	****************************/
+
+
+
+	.info-box {
+		display: block;
+		position: relative;
+		height: 40%;
+		width: 970px;
+		margin: auto auto;
+		padding-top: 20px;
+	}
+
+	.view-selectors {
+		display: inline-block;
+		float: left;
+		width: 100%;
+		margin: auto auto;
+		text-align: center;
+	}
+
+	.balances {
+		width:300px;
+		display: inline-block;
+		padding: 0 10px;
+		margin: auto auto;
+		vertical-align: middle;
+	}
+
+	.wallet {
+		width: 300px;
+		margin: auto auto;
+		text-align: center;
+		display: inline-block;
+		padding: 0 10px;
+		margin-top: 5px;
+		vertical-align: middle;
+	}
+
+	.view-selectors ul {
+		margin: auto auto;
+		padding-left: 0;
+		padding-bottom: 20px;
+	}
+
+	.view-selectors ul li {
+		list-style: none;
+		display: inline-block;
+		padding: 0 15px;
+		margin: auto auto;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 300;
+	}
+
+	.wallet img {
+		max-width: 150px;
+	}
+
+	#wallet-name, #wallet-balance {
+		display: inline-block;
+		padding: 0 1%;
+	}
+
+	#wallet-balance {
+		color: #47ACFB;
+	}
+
+	#share-wallet {
+		display: block;
+		margin: auto auto;
+		padding: 5px 40px;
+		height: 32px;
+	}
+
+	#share-wallet:hover {
+		background: #886fad;
+		color: #fff;
+	}
+
+	.btc, .euro {
+		display: block;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	#btc-balance {
+		display: block;
+	}
+
+	#euro-balance {
+		display: inline-block;
+	}
+
+	.type {
+		display: inline-block;
+	}
+
+	.euro {
+		display: none;
+	}
+
+	.btc-address {
+		clear: both;
+		display: block;
+		line-height: 1em;
+		font-size: .6em;
+	}
+
+	.value {
+		font-size: 2em;
+		color: #363f54;
+	}
+
+	.type {
+		font-size: 2em;
+		font-weight: 400;
+		padding-left: 10px;
+		margin-bottom: 0;
+	}
+
+	h2.type-euro {
+		color: #886fad;
+		font-size: 2em;
+		font-weight: 400;
+		padding-left: 10px;
+		margin-bottom: 0;
+		display: inline-block;
+	}
+
+	h2.type.btc {
+		color: #47ACFB;
+	}
+
+	.view-selectors h1 {
+		padding-bottom:  40px;
+	}
+
+	.converted {
+		clear: both;
+		display: block;
+		margin: auto auto;
+		padding-bottom: 10px;
+	}
+
+
+	.btc-buttons button, .euro-buttons button{
+		width: 110px;
+		margin: 0 5px;
+	}
+
+	.btc-buttons button:hover, .euro-buttons button:hover{
+		width: 110px;
+		margin: 0 5px;
+		background-color: #886fad;
+		color: #fff;
+	}
+
+	.converted {
+		color: #9c9fa1;
+	}
+
+	.btc-address {
+		margin-top: -10px;
+		padding-bottom: 20px;
+	}
+
+	#wallet-info {
+		margin-top: -10px;
+	}
+
+	.control-panel {
+		width: 300px;
+		display: inline-block;
+		margin: auto auto;
+		vertical-align: middle;
+		font-weight: 400;
+		padding: 0 10px;
+	}
+
+	.control-panel p {
+		color: #886fad;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: .85em;
+		line-height: 2em;
+		font-weight: 500;
+	}
+
+	.task, .points {
+		text-transform: uppercase;
+	}
+
+	.next-label {
+		padding-bottom: 20px;
+	}
+
+	.profile-input {
+		border-radius: 5px;
+		border-style: solid;
+		border-width: 1px;
+		border-color: #ccc;
+		height: 20px;
+	}
+
+
+	.profile-question {
+		text-align: center;
+		height: 20px;
+		margin-top: 5px;
+	}
+
+	.profile-question:hover {
+		cursor: pointer;
+	}
+
+	.profile-question.two,
+	.profile-question.three,
+	.profile-question.four {
+		display: none;
+	}
+
+	.street .profile-input {
+		width: 80%;
+		height: 20px;
+	}
+
+	.postal-code, .city {
+		display: none;
+	}
+
+	#wallet-name {
+		padding-top: 5px;
+	}
+
+
+	.control-panel form img {
+		width: 20px;
+		display: inline-block;
+		padding-bottom: 0;
+		margin-bottom: -5px;
+		padding-left: 20px;
+	}
+
+	.control-panel ul li img, .control-panel ul li p {
+		display: inline-block;
+	} 
+
+	.objectives {
+		padding-left: 0;
+	}
+
+	.control-panel ul li p{
+		margin: 2px 0;
+	}
+
+	.control-panel ul li a p{
+		font-size: .75em;
+		text-decoration: none;
+	}
+
+	.control-panel ul li a {
+		text-decoration: none;
+	}
+
+	.profile-question.one input {
+		display: none;
+	}
+
+	.street, .postal-code, .city, .country {
+		display: none;
+	}
+
+	#select-country {
+		width: 80%;
+		height: 20px;
+		padding: 1px 0px;
+	}
+
+	.complete {
+		text-align: center;
+		display: none;
+	}
+
+	.points {
+		color: #000;
+		font-weight: 600;
+		font-size: .75em;
+	}
+
+	.task {
+		font-weight: 400;
+		font-size: .75em;
+	}
+
+	.welcome-message img {
+		float: left;
+	}
+
+	.welcome-message {
+		display: block;
+		height: 55px;
+		text-align: center;
+	}
+
+
+	.balance {
+		padding-bottom: 35px;
+	}
+
+	#euro-balance {
+		display: none;
+	}
+
+	#viewtoggle li,
+	#viewtoggle-euro li {
+		list-style: none;
+		display: inline-block;
+		text-align: center;
+		margin: auto 0px;
+	}
+
+	#viewtoggle,
+	#viewtoggle-euro {
+		text-align: center;
+		margin: auto auto;
+		padding-left: 0;
+		display:inline-block;
+	}
+
+
+	#euro-balance #viewtoggle-euro #btc-euro a {
+		text-decoration: none;
+		color: #363f54;
+		padding: 5px 25px;
+		border-radius: 5px 0 0 5px;
+		background-color: #E8D9FF;
+		margin-right: -3px;
+	}
+
+	#euro-balance #viewtoggle-euro #euro-euro a {
+		text-decoration: none;
+		color: #fff;
+		text-decoration: none;
+		background-color: #886FAD;
+		font-weight: 500;
+		padding: 5px 20px;
+		border-radius: 0 5px 5px 0;
+		margin-left: -3px;
+	}
+
+	#btc-balance #viewtoggle #btc a {
+		text-decoration: none;
+		background-color: #47ACFB;
+		font-weight: 500;
+		color: #fff;
+		padding: 5px 25px;
+		border-radius: 5px 0 0 5px;
+		margin-right: -3px;
+	}
+
+	#btc-balance #viewtoggle #euro a {
+		text-decoration: none;
+		color: #363f54;
+		padding: 5px 20px;
+		border-radius: 0 5px 5px 0;
+		background-color: #D9EEFF;
+		margin-left: -3px;
+	}
+
+	#btc-balance #viewtoggle #euro a:hover, #btc-balance #viewtoggle #btc a:hover {
+		cursor: pointer;
+		cursor: hand;
+	}
+
+	#progress-area {
+		width: 80%;
+		margin: auto auto;
+		padding-bottom: 50px;
+	}
+
+	.progress-block-space {
+		height: 32px;
+	}
+
+
+	#profilenano {
+		width: 100%;
+		height: 10px !important;
+		z-index: 10 !important;
+		top: 0px;
+		float: left;
+		position: relative;
+		border-width: 1px;
+		border-color: #000;
+		border-style: solid;
+		border-radius: 4px;
+		display: none !important;
+	}
+
+	.profile-submit {
+		background: #886fad;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: .85em;
+		border: none;
+		border-radius: 5px;
+		padding: 2.5px 10px;
+		display: inline-block;
+		}
+
+	.info-box canvas {
+		width: 150px !important;
+		height: 150px !important;
+		margin-top: 2px;
+		margin-left: 75px;
+		margin-bottom: 22px; 
+	}
+
+	.dial {
+		width: 104px;
+		height: 66px;
+		position: absolute;
+		vertical-align: middle;
+		margin-top: 45px !important;
+		margin-left: -127px !important;
+		border: 0px;
+		font-weight: bold;
+		font-style: normal;
+		font-variant: normal;
+		font-stretch: normal;
+		font-size: 40px;
+		line-height: normal;
+		font-family: Arial;
+		text-align: center;
+		color: rgb(114, 100, 153);
+		padding: 0px;
+		-webkit-appearance: none;
+		background: none;
+	}
+
+	.street, .postal-code, .city, .country, .complete {
+		height: 20px;
+		width: 210px;
+		margin: auto auto;
+		margin-top: 5px;
+
+	}
+
+	.street, .postal-code, .city, .country {
+		margin-top: 10px;
+	}
+
+	.complete {
+		padding-top: 3px;
+	}
+
+	.country {
+		line-height: 24px;
+	}
+
+
+
+
+	/****************************
+			BOTTOM BOX
+	****************************/
+
+
+
+	.bottom-box {
+		display: block;
+		clear: both;
+		width: 80%;
+		margin: auto auto;
+		padding-top: 40px;
+		font-size: 1.5em;
+		font-weight: 300;
+		height: 40%;
+	}
+
+	.transaction-info {
+		display: block;
+		font-size: 1em;
+		margin: auto;
+		text-align: left;
+		padding-left: 30px;
+	}
+
+	.bottom-box h1 {
+		font-size: .8em;
+		text-align: center;
+		display: inline-block;
+	}
+
+	.bottom-box td {
+		font-size: .6em;
+		width: auto;
+		display: inline-block;
+	}
+
+	.bottom-box a {
+		text-decoration: none;
+		font-weight: 600;
+		display: inline-block;
+		font-size: .5em;
+	}
+
+	.table-label {
+		padding-left: 30px;
+	}
+
+
+	.bottom-box td.time-passed {
+		padding-left: 5%;
+	}
+
+	table {
+		width: 100%;
+		margin: auto;
+	}
+
+	.transaction-border {
+		width: 100%;
+	  	height: 2px;
+	  	margin: 10px auto;
+	  	background: -webkit-linear-gradient(left, #47ACFB, #886fad); /* For Safari 5.1 to 6.0 */
+	  	background: -o-linear-gradient(right, #47ACFB, #886fad); /* For Opera 11.1 to 12.0 */
+	  	background: -moz-linear-gradient(right, #47ACFB, #886fad); /* For Firefox 3.6 to 15 */
+	  	background: linear-gradient(to right, #47ACFB, #886fad); /* Standard syntax */
+	}
+
+	.bottom-box .transaction-amount {
+		width: 15%;
+	}
+
+	.transaction-amount .to-from {
+		text-align: right;
+		width:10%;
+	}
+
+	.transaction-amount.amount {
+		border: none;
+	}
+
+
+	.transaction-amount.amount.neg {
+		color: #DB776D;
+		font-weight: 600;
+	}
+
+
+	.transaction-amount.amount.pos {
+		color: #97CCA3;
+		font-weight: 600;
+	}
+
+	.table-label a {
+		padding-left: 30px;
+	}
+
+
+/****************************
+		MODAL
+****************************/
+
+#buy-btc, 
+#sell-btc, 
+#deposit-euro,
+#withdrawal-euro {
+	text-align: center;
+}
+
+#buy-btc input, 
+#sell-btc input, 
+#deposit-euro input,
+#withdrawal-euro input {
+	display: block;
+	margin: auto auto;
+	margin-top: 15px;
+}
+
+.form-label {
+	text-align: center;
+}
+
+#buy-btc .amount, 
+#sell-btc .amount, 
+#deposit-euro .amount,
+#withdrawal-euro .amount {
+	width: 100%;
+	border-style: none;
+	margin: auto auto;
+	margin-top: 20px;
+}
+
+#buy-btc #input-btc-address, 
+#buy-btc #input-amount-buy, 
+#deposit-euro #input-amount-pbw,
+#deposit-euro #input-amount-sofort,
+#deposit-euro #input-amount-sepa,
+#withdrawal-euro #input-amount-withdraw {
+	border-radius: 5px;
+	border-style: solid;
+	border-color: #886fad;
+	border-width: 1px;
+	text-align: center;
+	margin: 0 5px;
+}
+
+#buy-btc #input-btc-address, 
+#sell-btc #input-btc-address,
+#deposit-euro #input-btc-address,
+#withdrawal-euro #input-btc-address {
+	padding: 5px 0px;
+	width: 20%;
+	font-size: 1.25em;
+}
+
+.special-value {
+	display: inline-block;
+}
+
+#fee_div {
+	font-size: .75em;
+}
+
+.form-field-amount {
+	margin-top: 20px;
+}
+
+#buy-btc th, 
+#sell-btc th,
+#deposit-euro th,
+#withdrawal-euro th {
+	text-align: right;
+	padding-right: 5px;
+}
+
+#buy-btc td, 
+#sell-btc td,
+#deposit-euro td,
+#withdrawal-euro td {
+	text-align: left;
+	padding-left: 5px;
+}
+
+#buy-btc table, 
+#sell-btc table,
+#deposit-euro table,
+#withdrawal-euro table {
+	margin: auto auto;
+}
+
+.field.form-field.calculation {
+	padding-top: 10px;
+	font-size: .85em;
+}
+
+#buy-btc .converted, 
+#sell-btc .converted,
+#deposit-euro .converted,
+#withdrawal-euro .converted {
+	display: inline-block;
+}
+
+.field.form-field.available {
+	font-size: .8em;
+	padding-top: 15px;
+}
+
+#buy-btc #input-amount-buy, 
+#sell-btc #input-amount-sell,
+#deposit-euro #input-amount-pbw,
+#deposit-euro #input-amount-sofort,
+#deposit-euro #input-amount-sepa,
+#withdrawal-euro #input-amount-withdraw {
+	display: inline-block;
+	width: 125px;
+}
+
+#buy-btc #button-submit, 
+#sell-btc #button-submit,
+#deposit-euro #button-submit,
+#withdrawal-euro #button-submit {
+	background: transparent;
+	border-style: solid;
+	border-radius: 5px;
+	padding: 4px 35px;
+	border-color: #886fad;
+	text-transform: uppercase;
+	color: #886fad;
+}
+
+#buy-btc #button-submit:hover, 
+#sell-btc #button-submit:hover,
+#deposit-euro #button-submit:hover,
+#withdrawal-euro #button-submit:hover {
+	background: #886fad;
+	color: #fff;
+}
+
+#buy-btc .select, 
+#sell-btc .select,
+#deposit-euro .select,
+#withdrawal-euro .select {
+	background: transparent;
+	border-color: #886fad;
+}
+
+#simplemodal-overlay {
+	background-color:#000;
+}
+
+#simplemodal-container {
+	background-color:#fff; 
+	padding:12px; 
+	border-radius: 5px;
+}
+
+#simplemodal-container a.modalCloseImg {
+	background:url(../img/close.png) no-repeat center; 
+	width:35px; 
+	height: 35px; 
+	border-radius: 50%; 
+	z-index:3200; 
+	position:absolute; 
+	top:-17px; 
+	right:-15px; 
+	cursor:pointer;
+}
+
+#buy-btc {
+	margin-top: 40px;
+}
+
+#sell-btc {
+	margin-top: 30px;
+}
+
+#buy-btc {
+	display: none;
+}
+
+#sell-btc {
+	display: none;
+}
+
+#deposit-euro {
+	width: 500px;
+	display: none;
+}
+
+#withdrawal-euro {
+	width: 500px;
+	display: none;
+}
+
+#share {
+	text-align: center;
+	margin-top: 30px;
+	display: none;
+}
+
+#share .btc-address {
+	margin-top: 20px;
+	font-size: .7em;
+}
+
+.social-share {
+	display: inline-block;
+	margin: auto auto;
+	height: 32px;
+}
+
+.share-icon {
+	text-decoration: none;
+	display: inline-block;
+	height: 28px;
+	margin: 0 10px;
+}
+
+.social-share a {
+	text-decoration: none;
+}
+
+
+
+.social-share {
+	display: none;
+}
+
+.payment-pbw {
+	display: none;
+}
+
+.payment-sofort {
+	display: none;
+}
+
+.payment-sepa {
+	display: none;
+}
+
+.payment-sepa-ready {
+	display: none;
+}
+
+.pmt-button {
+	width: 25%;
+	display: inline-block;
+	margin: auto auto;
+}
+
+.field.actions a {
+	text-decoration: none;
+}
+
+.field.body {
+	width: 80%;
+	margin: auto auto;
+	padding-top: 40px;
+}
+
+.change-bank {
+	display: none;
+}
+
+.buy-alert-message {
+	padding-top: 10px;
+	width:400px;
+}
+
+.sell-alert-message {
+	padding-top: 10px;
+}
+
+.deposit-alert-message {
+	padding-top: 10px;
+}
+
+.withdraw-alert-message {
+	padding-top: 10px;
+	width:100%;
+}
+
+.system-message {
+	padding: 5px 0;
+}
+
+.system-message.success {
+	background-color: #97CCA3;
+	border-radius: 5px;
+	display: none;
+	width: 60%;
+	height: 20px;
+	margin: auto auto;
+	margin-bottom: -5px;
+	text-align: center;
+}
+
+.system-message.notice {
+	background-color: #FFE397;
+	border-radius: 5px;
+	display: none;
+	width: 60%;
+	height: 20px;
+	margin: auto auto;
+	margin-bottom: -5px;
+	text-align: center;
+}
+
+
+.system-message.failure {
+	background-color: #DB776D;
+	border-radius: 5px;
+	display: none;
+	width: 60%;
+	height: 20px;
+	margin: auto auto;
+	margin-bottom: -5px;
+	text-align: center;
+}
+
+.block-system-messages {
+	padding-top: 5px;
+}
+
+.change-selection {
+	cursor: pointer;
+}
+
+/****************************
+		SETTINGS PAGE
+****************************/
+
+
+	/****************************
+			SETTINGS NAV
+	****************************/
+
+
+	.settings-options {
+		position: relative;
+		padding-top: 70px;
+	}
+
+	.settings-toggles {
+		list-style: none;
+		text-align: center;
+		width: 50%;
+		margin: auto auto;
+		padding-left: 0;
+		border-bottom: 1px solid #DDDDDD;
+	}
+
+	.settings-toggles li, .settings-toggles li a {
+		display: inline-block;
+		padding: 5px 10px;
+		color: #626262;
+		font-weight: 300;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+
+	.settings-toggles li a:active {
+		font-weight: 600;
+		color: #000;
+	}
+
+	.settings-toggles li:first-child {
+		padding-left: 0;
+	}
+
+	.settings-toggles li:last-child {
+		padding-right: 0;
+	}
+
+		/****************************
+			SECTIONS
+		****************************/
+
+
+		.profile {
+			text-align: center;
+			padding-top: 60px;
+			width: 45%;
+			margin: auto auto;
+		}
+
+		.form-label {
+			font-weight: 600;
+		}
+
+		.field {
+			padding: 5px 0;
+		}
+
+		.bank {
+			text-align: center;
+			padding-top: 20px;
+			width: 45%;
+			margin: auto auto;
+			display: none;
+		}
+
+		.password-page {
+			text-align: center;
+			padding-top: 20px;
+			width: 45%;
+			margin: auto auto;
+			display: none;
+		}
+
+		.two-factor {
+			text-align: center;
+			padding-top: 20px;
+			width: 45%;
+			margin: auto auto;
+			display: none;
+		}
+
+		.verification {
+			text-align: center;
+			padding-top: 20px;
+			width: 45%;
+			margin: auto auto;
+			display: none;
+		}
+
+
+
+#messages-section {
+	text-align: center;
+}
+
+#input-message {
+	width: 45%;
+	height: 150px;
+}
+
+.deposit-landing .change-selection {
+	display: none;
+}
+
+
+.login {
+	text-align: center;
+	position: relative;
+	display: block;
+	padding-top: 70px;
+}
+
+#input-e-mail, #input-password {
+	padding: 3px 0;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

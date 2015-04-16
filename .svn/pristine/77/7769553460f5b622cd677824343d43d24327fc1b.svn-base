@@ -1,0 +1,318 @@
+$(document).ready(function() {        
+        $('#viewtoggle > li').click(function() {
+        var ix = $(this).index();
+
+        $('#btc-balance').toggle( ix === 0 );
+        $('#euro-balance').toggle( ix === 1 );
+        });   
+
+        $('#btc-buy').bind('click', function(e) {
+            e.preventDefault(); 
+
+            console.log("clicked");
+
+            $('#buy-btc').modal({
+                minHeight:325,
+                minWidth: 325,
+                overlayClose:true
+            });
+
+            console.log("loaded");
+
+        });
+
+        $('#btc-sell').bind('click', function(e) {
+            e.preventDefault(); 
+
+            console.log("clicked");
+
+            $('#sell-btc').modal({
+                minHeight:325,
+                minWidth: 325,
+                overlayClose:true
+            });
+
+            console.log("loaded");
+
+        });
+
+        $('#euro-deposit').bind('click', function(e) {
+            e.preventDefault(); 
+
+            console.log("clicked");
+
+            $('#deposit-euro').modal({
+                minHeight:375,
+                minWidth: 325,
+                overlayClose:true
+            });
+
+            console.log("loaded");
+
+        });
+
+        $('#euro-withdrawal').bind('click', function(e) {
+            e.preventDefault(); 
+
+            console.log("clicked");
+
+            $('#withdrawal-euro').modal({
+                minHeight:500,
+                minWidth: 325,
+                overlayClose:true
+            });
+
+            console.log("loaded");
+
+        });
+
+        $("input[name='amount']").click(function(e) {
+            $(".show-conversion").toggle();
+            e.stopPropagation();
+        });
+
+        $(document).click(function(e) {
+            if (!$(e.target).is('.show-conversion, .show-conversion *')) {
+                $(".show-conversion").hide();
+            }
+        });
+
+
+        $('#share-wallet').click(function(e) {
+            $(".social-share").toggle();
+            $("#share-wallet").hide();
+            e.stopPropagation();
+        });
+
+        $(document).click(function(e) {
+            if (!$(e.target).is('.social-share, .social-share *')) {
+                $(".social-share").hide();
+                $("#share-wallet").show();
+            }
+        });
+
+        $('.pmt-button').click(function() {
+            $(".field.body").hide();
+        });
+
+        $('.change-selection').click(function() {
+                $(".change-selection").hide();
+                $(".payment-sepa").hide();
+                $(".payment-pbw").hide();
+                $(".payment-sofort").hide();
+                $("#sofort-button").show();
+                $("#pbw-button").show();
+                $("#sepa-button").show();
+        });
+
+
+        $('#sepa-button').click(function() {
+                $(".payment-sepa").show();
+                $("#pbw-button").hide();
+                $("#sofort-button").hide();
+                $(".change-bank").show();
+        });
+
+        $('#pbw-button').click(function() {
+                $(".payment-pbw").show();
+                $("#sepa-button").hide();
+                $("#sofort-button").hide();
+                $(".change-bank").show();
+        });
+
+        $('#sofort-button').click(function() {
+                $(".payment-sofort").show();
+                $("#pbw-button").hide();
+                $("#sepa-button").hide();
+                $(".change-bank").show();
+        });
+
+        $('#sepa-submit').click(function() {
+            $(".payment-sepa-ready").show();
+    });
+
+        $('.send-btc').click(function(eventObj) {
+                eventObj.preventDefault();
+                console.log('foo');
+            $.ajax({
+                url: 'http://www.mocky.io/v2/54489277281a0c10017194bf',
+                dataType: 'jsonp',
+                jsonpCallback: 'callback',
+                success: function (data) {
+                    $(".send-alert-message")
+                        .text('SUCCESS!')
+                        .show();
+                    setTimeout(function() { 
+                        $('.send-alert-message').fadeOut(); 
+                    }, 5000);
+                },
+                error: function () {                
+                    $(".send-alert-message")
+                        .text('FAIL!')
+                        .show();
+                    setTimeout(function() { 
+                        $('.send-alert-message').fadeOut(); 
+                    }, 5000);
+                }
+            })
+        }); 
+
+
+        $("input[name='buy']").click(function(eventObj) {
+                eventObj.preventDefault();
+                console.log('foo');
+            $.ajax({
+                url: 'http://www.mocky.io/v2/54489277281a0c10017194bf',
+                dataType: 'jsonp',
+                jsonpCallback: 'callback',
+                success: function (data) {
+                    $(".buy-alert-message")
+                        .text('SUCCESS!')
+                        .show();
+                    setTimeout(function() { 
+                        $('.buy-alert-message').fadeOut(); 
+                    }, 10000);
+                },
+                error: function () {                
+                    $(".buy-alert-message")
+                        .text('FAIL!')
+                        .show();
+                    setTimeout(function() { 
+                        $('.buy-alert-message').fadeOut(); 
+                    }, 10000);
+                }
+            })
+        }); 
+
+
+        $("input[name='sell']").click(function(eventObj) {
+                eventObj.preventDefault();
+                console.log('foo');
+            $.ajax({
+                url: 'http://www.mocky.io/v2/54489277281a0c10017194bf',
+                dataType: 'jsonp',
+                jsonpCallback: 'callback',
+                success: function (data) {
+                    $(".sell-alert-message")
+                        .text('SUCCESS!')
+                        .show();
+                    setTimeout(function() { 
+                        $('.sell-alert-message').fadeOut(); 
+                    }, 10000);
+                },
+                error: function () {                
+                    $(".sell-alert-message")
+                        .text('FAIL!')
+                        .show();
+                    setTimeout(function() { 
+                        $('.sell-alert-message').fadeOut(); 
+                    }, 10000);
+                }
+            })
+        }); 
+
+        $("input[name='deposit_pbw']").click(function(eventObj) {
+                eventObj.preventDefault();
+                console.log('foo');
+            $.ajax({
+                url: 'http://www.mocky.io/v2/54489277281a0c10017194bf',
+                dataType: 'jsonp',
+                jsonpCallback: 'callback',
+                success: function (data) {
+                    $(".deposit-alert-message")
+                        .text('SUCCESS!')
+                        .show();
+                    setTimeout(function() { 
+                        $('.deposit-alert-message').fadeOut(); 
+                    }, 10000);
+                },
+                error: function () {                
+                    $(".deposit-alert-message")
+                        .text('FAIL!')
+                        .show();
+                    setTimeout(function() { 
+                        $('.deposit-alert-message').fadeOut(); 
+                    }, 10000);
+                }
+            })
+        }); 
+
+        $("input[name='deposit_sofort']").click(function(eventObj) {
+                eventObj.preventDefault();
+                console.log('foo');
+            $.ajax({
+                url: 'http://www.mocky.io/v2/54489277281a0c10017194bf',
+                dataType: 'jsonp',
+                jsonpCallback: 'callback',
+                success: function (data) {
+                    $(".deposit-alert-message")
+                        .text('SUCCESS!')
+                        .show();
+                    setTimeout(function() { 
+                        $('.deposit-alert-message').fadeOut(); 
+                    }, 10000);
+                },
+                error: function () {                
+                    $(".deposit-alert-message")
+                        .text('FAIL!')
+                        .show();
+                    setTimeout(function() { 
+                        $('.deposit-alert-message').fadeOut(); 
+                    }, 10000);
+                }
+            })
+        }); 
+
+        $("input[name='deposit_bank']").click(function(eventObj) {
+                eventObj.preventDefault();
+                console.log('foo');
+            $.ajax({
+                url: 'http://www.mocky.io/v2/54489277281a0c10017194bf',
+                dataType: 'jsonp',
+                jsonpCallback: 'callback',
+                success: function (data) {
+                    $(".deposit-alert-message")
+                        .text('SUCCESS!')
+                        .show();
+                    setTimeout(function() { 
+                        $('.deposit-alert-message').fadeOut(); 
+                    }, 10000);
+                },
+                error: function () {                
+                    $(".deposit-alert-message")
+                        .text('FAIL!')
+                        .show();
+                    setTimeout(function() { 
+                        $('.deposit-alert-message').fadeOut(); 
+                    }, 10000);
+                }
+            })
+        }); 
+
+        $("input[name='withdraw']").click(function(eventObj) {
+                eventObj.preventDefault();
+                console.log('foo');
+            $.ajax({
+                url: 'http://www.mocky.io/v2/54489277281a0c10017194bf',
+                dataType: 'jsonp',
+                jsonpCallback: 'callback',
+                success: function (data) {
+                    $(".withdraw-alert-message")
+                        .text('SUCCESS!')
+                        .show();
+                    setTimeout(function() { 
+                        $('.withdraw-alert-message').fadeOut(); 
+                    }, 10000);
+                },
+                error: function () {                
+                    $(".withdraw-alert-message")
+                        .text('FAIL!')
+                        .show();
+                    setTimeout(function() { 
+                        $('.withdraw-alert-message').fadeOut(); 
+                    }, 10000);
+                }
+            })
+        }); 
+
+    });

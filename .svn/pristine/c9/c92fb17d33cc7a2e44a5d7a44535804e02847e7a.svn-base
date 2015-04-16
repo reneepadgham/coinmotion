@@ -1,0 +1,259 @@
+@media screen and (max-width: 1120px) {
+
+
+	.send {
+		font-size: .85em;
+	}
+
+	.address {
+		width: auto;
+	}
+
+	.wallet {
+		width: 21%;
+	}
+
+	.balances {
+		width: 35%;
+	}
+
+	.control-panel {
+		width: 25%;
+	}
+
+	.info-box {
+		width: 90%;
+	}
+
+	.border, .bottom-box {
+		width: 85%;
+	}
+
+
+	.control-panel {
+		padding-left: 6%;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.top-buttons {
+		display: none;
+	}
+
+	.top-box {
+		height: 25px;
+	}
+
+	.send {
+		width:80%;
+		float: right;
+		text-align: right;
+	}
+
+	#mobile-header {
+		display: block;
+	}
+
+	#mobile-header a{
+		display: block;
+		float: right;
+	}
+
+	.main-links {
+		display: block;
+	}
+
+	.main-links {
+		display: none;
+	}
+
+	#responsive-menu-button {
+		color: #fff;
+		width: 10%;
+		padding: 2px 10px;
+		margin-top: 10px;
+		margin-right: 5%;
+	}
+
+	#responsive-menu-button img {
+		width: 40px;
+	}
+
+	.control-panel {
+		clear: both;
+		margin-left: 8%;
+		width: 40%;
+		padding-left: 0;
+	}
+
+	.balances {
+		width: 43%;
+		float: right;
+		margin-top: 15px;
+	}
+
+	.wallet {
+		clear: both;
+		margin-top: 40px;
+		float: left;
+		margin-left: 5%;
+		width: 26%;
+	}
+
+	.bottom-box {
+		float: right;
+		width: 50%;
+		display: inline-block;
+		position: relative;
+		clear: none;
+		margin-right: 10%;
+		margin-left: 4%;
+	}
+
+	.bottom-box h1 {
+		padding-left: 0;
+	}
+
+	.bottom-box td {
+		font-size: .5em;
+	}
+
+	.transaction-info {
+		padding-left: 0;
+	}
+
+	tbody {
+		font-size: .8em;
+	}
+}
+
+
+@media screen and (max-width: 650px) {
+
+	.btc-ticker {
+		width: 35%;
+		text-align: center;
+		display: block;
+		margin: auto auto;
+		float: none;
+	}
+
+	#ask_price {
+		font-size: 1em;
+	}
+
+	.send {
+		width: 90%;
+		text-align: center;
+		display: none;
+		padding-top: 10px;
+		float: none;
+	}
+
+	.mobile-send {
+		display: block;
+	}
+
+	.top-box {
+		height: 50px;
+		padding-top: 75px;
+	}
+
+	.balances {
+		width: 95%;
+		float: left;
+		margin-top: 15px;
+		display: block;
+		position: absolute;
+	}
+
+	.control-panel {
+		float: right;
+		width: 50%;
+		padding-left: 0;
+		display: block;
+		padding-top: 330px;
+		position: relative;
+		margin-right: 25%;
+		padding-right: 0;
+	}
+
+	.wallet {
+		clear: both;
+		margin-top: 40px;
+		float: left;
+		margin-left: 27%;
+		width: 40%;
+	}
+
+	.bottom-box {
+		width: 70%;
+		display: inline-block;
+		position: relative;
+		float: none;
+		margin-left: 12%;
+		margin-right: 15%;
+	}
+
+}
+
+@media screen and (max-width: 580px) {
+
+	.top-box {
+		height: 60px;
+		padding-top: 75px;
+	}
+
+	.amount {
+		width: 80px;
+	}
+
+	.address {
+		width: 75%;
+		margin-top: 10px;
+	}
+
+}
+
+@media screen and (max-width: 500px) {
+
+	.wallet {
+		width: 60%;
+		margin-left: 20%;
+	}
+
+	.bottom-box {
+		width: 85%;
+		margin-left: 7.5%;
+		margin-right: 0;
+	}
+
+	.control-panel {
+		width: 70%;
+		margin-right: 15%;
+	}
+
+	.btc-ticker {
+		width: 45%;
+	}
+
+	.top-box {
+		height: 60px;
+	}
+
+	.send-btc {
+		margin-left: 0;
+		margin-top: 10px;
+	}
+
+	.address {
+		width: 100%;
+	}
+
+}
+
+
+
+
+
+

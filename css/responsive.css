@@ -1,0 +1,258 @@
+@media screen and (max-width: 1200px) {
+
+
+	.send {
+		font-size: .85em;
+	}
+
+	.address {
+		width: auto;
+	}
+
+	.border, .bottom-box {
+		width: 85%;
+	}
+
+}
+
+@media screen and (min-width: 960px) and (max-width: 1500px) {
+	.mobile {
+		display: none !important;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.top-buttons {
+		display: none;
+	}
+
+	.send {
+		width:80%;
+		float: right;
+		text-align: right;
+	}
+
+	#mobile-header {
+		display: block;
+	}
+
+	#mobile-header a{
+		display: block;
+		float: right;
+	}
+
+	.main-links {
+		display: block;
+	}
+
+	.main-links {
+		display: none;
+	}
+
+	#responsive-menu-button {
+		color: #fff;
+		width: 10%;
+		padding: 2px 10px;
+		margin-top: 10px;
+		margin-right: 5%;
+	}
+
+	#responsive-menu-button img {
+		width: 40px;
+	}
+
+	.bottom-box {
+		width: 85%;
+		display: block;
+		position: relative;
+		margin-left: 7.5%;
+	}
+
+	.bottom-box h1 {
+		padding-left: 0;
+	}
+
+	.bottom-box td {
+		font-size: .8em;
+	}
+
+	.transaction-info {
+		padding-left: 15px;
+	}
+
+	tbody {
+		font-size: .8em;
+	}
+
+	#ask_price {
+		font-size: .85em;
+	}
+
+	.btc-ticker {
+		width: 35%;
+		text-align: center;
+		display: block;
+		margin: auto auto;
+		float: none;
+	}
+
+	.send {
+		width: 90%;
+		text-align: center;
+		display: none;
+		padding-top: 10px;
+		float: none;
+	}
+
+	.mobile-send {
+		display: block;
+	}
+
+
+	.top-box {
+		padding-top: 75px;
+	}
+
+	.control-panel {
+		display: none;
+	}
+
+	.table-label {
+		padding-left: 15px;
+	}
+
+	.mobile-send .amount {
+		width: 100px;
+	}
+
+	.info-box {
+		width: 645px;
+	}
+
+}
+
+
+
+@media screen and (max-width: 650px) {
+
+	#ask_price {
+		font-size: 1em;
+	}
+
+	.wallet, .balances {
+		clear: both;
+		float: none;
+		display: block;
+		margin: auto auto;
+	}
+
+	.bottom-box {
+		width: 70%;
+		display: inline-block;
+		position: relative;
+		float: none;
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+
+
+	.bottom-box td {
+		font-size: .85em;
+	}
+
+	.bottom-box td.time-passed {
+		text-align: left;
+		width: 40%;
+		padding-left: 5%;
+	}
+
+	.bottom-box .transaction-amount {
+		width: 40%;
+		padding-right: 5%;
+		text-align: right;
+	}
+
+	.to-from {
+		display: none !important;
+	}
+
+	.account-address {
+		display: none !important;
+	}
+
+	.control-panel {
+		display: none;
+	}
+
+	.table-label {
+		padding-left: 0;
+		text-align: center;
+	}
+
+	.transaction-info {
+		padding-left: 0;
+	}
+
+	.info-box {
+		width: auto;
+	}
+
+	.wallet {
+		margin-top: 100px;
+	}
+
+}
+
+@media screen and (max-width: 580px) {
+
+	.top-box {
+		height: 60px;
+		padding-top: 75px;
+	}
+
+	.amount {
+		width: 80px;
+	}
+
+	.address {
+		width: 75%;
+		margin-top: 10px;
+	}
+
+}
+
+@media screen and (max-width: 500px) {
+
+	.bottom-box {
+		width: 85%;
+		margin-left: 7.5%;
+		margin-right: 0;
+	}
+
+
+	.btc-ticker {
+		width: 45%;
+	}
+
+	.top-box {
+		height: 60px;
+	}
+
+	.send-btc {
+		margin-left: 0;
+		margin-top: 10px;
+	}
+
+	.address {
+		width: 100%;
+	}
+
+	
+
+}
+
+
+
+
+
+

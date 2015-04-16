@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            Coinmotion: Buy, store and use Bitcoins with ease
+        </title>
+        <meta name="description" content="Coinmotion provides a fast and secure platform for buying, storing and using bitcoins." />
+        <meta name="keywords" content="" />
+        <!-- <link type="image/x-icon" rel="shortcut icon" href="/favicon.ico" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=4, minimum-scale=1, user-scalable=yes" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css" type="text/css"> 
+        <link rel="stylesheet" type="text/css" href="css/responsive.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.sidr.dark.css">
+
+    </head>
+
+<body>
+
+<header>
+
+    <div class="main-nav">
+        <div id="mobile-header">
+            <a id="responsive-menu-button" href="#sidr-main"><img src="img/menu.png" alt="menu"></a>
+        </div>
+        <nav>
+            <div class="logo-area"><img src="img/logowhite.png" alt="logo" class="logo"></div>
+            <ul class="main-links">
+                <li><a href="" id="homenav">Home</a></li>
+                <li><a href="wallet.html" id="walletnav">Wallet</a></li>
+                <li><a href="" id="faqnav">FAQ</a></li>
+                <li><a href="" id="teamnav">Team</a></li>
+                <li class="nav-messages" id="messagenav"><a href="">Messages</a></li>
+                <li class="nav-settings" id="settingsnav"><a href="settings.html">Settings</a></li>
+                <li><a href="" id="login-logout">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="system-messages-login" class="block block-system-messages"></section>
+    
+  <section>
+    <div class="login">
+        <h1 class="field title">
+            Sign in
+        </h1><a name="login"></a>
+        <form class="form autoform" id="form-sign-in" action="/login?ajax_content=true#login" method="post">
+            <div class="field form-field e-mail">
+                <input type="text" name="email" id="input-e-mail" value="" class="input" autofocus="autofocus" placeholder=" E-mail" />
+            </div>
+            <div class="field form-field password">
+                <input type="password" name="password" id="input-password" value="" class="input" placeholder=" Password" />
+            </div>
+            <div class="field form-field submit">
+                <input class="button" id="input-submit" name="login" type="submit" value="Sign in" />
+            </div>
+            <div class="field recover-password">
+                <a href="/forgot_password">I forgot my password</a>
+            </div><input type="hidden" name="login" value="true" />
+        </form>
+    </div>
+</section>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/jquery.simplemodal.1.4.4.min.js"></script>
+<script src="js/jquery.sidr.min.js"></script>
+<script src="js/wallet.js"></script>
+<!--
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+-->
+</body>
+

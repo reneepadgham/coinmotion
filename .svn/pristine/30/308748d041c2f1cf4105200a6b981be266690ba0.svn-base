@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            Coinmotion: Buy, store and use Bitcoins with ease
+        </title>
+        <meta name="description" content="Coinmotion provides a fast and secure platform for buying, storing and using bitcoins." />
+        <meta name="keywords" content="" />
+        <!-- <link type="image/x-icon" rel="shortcut icon" href="/favicon.ico" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=4, minimum-scale=1, user-scalable=yes" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css" type="text/css"> 
+        <link rel="stylesheet" type="text/css" href="css/responsive.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.sidr.dark.css">
+
+    </head>
+
+
+<body id="walletpage">
+
+<header>
+
+    <div class="main-nav">
+        <div id="mobile-header">
+            <a id="responsive-menu-button" href="#sidr-main"><img src="img/menu.png"></a>
+        </div>
+        <nav>
+            <div class="logo-area"><img src="img/logowhite.png" alt="logo" class="logo"></div>
+            <ul class="main-links">
+                <li><a href="" id="homenav">Home</a></li>
+                <li><a href="wallet.html" id="walletnav">Wallet</a></li>
+                <li><a href="" id="faqnav">FAQ</a></li>
+                <li><a href="" id="teamnav">Team</a></li>
+                <li class="nav-messages" id="messagenav"><a href="">Messages</a></li>
+                <li class="nav-settings" id="settingsnav"><a href="settings.html">Settings</a></li>
+                <li><a href="" id="login-logout">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+
+<div class="top-box">
+    <div class="btc-ticker">
+        <span id="ask_price" class="value">306.49 € / 1 BTC</span>
+    </div>
+    <div class="send">
+        <form class="form autoform" id="form-withdraw" action="#" method="post">
+            Send <input type="text" name="amount" id="input-amount-multisig" class="amount" placeholder=".25"> btc to <input type="text" name="btc_address" id="input-btc-address" class="address" placeholder="1JuBoovp6uNVZETadvBzCTTDCaNJCKcz16">
+            <button id="btc-button-submit" name="send" type="submit" class="send-btc">Go</button>
+        </form>
+    </div>
+    <div class="mobile-send">
+        <button class="open-mobile-send">Send btc</button>
+        <div class="mobile-send-form"><form class="form autoform" id="form-withdraw" action="#" method="post">
+            <span class="mobile-send-amount">Amount: <input type="text" name="amount" id="input-amount-mobile" class="amount" placeholder=".25"></span>
+            To: <input type="text" name="btc_address" id="input-btc-address" class="address" placeholder="1JuBoovp6uNVZETadvBzCTTDCaNJCKcz16">
+            </form>
+            <div class = "mobile-submit-buttons">
+            <button id="btc-button-submit-mobile" name="send" type="submit" class="send-btc">Send</button>
+            <button id="btc-button-cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <div class ="top-buttons">
+        <div class="message-icon">
+            <a href="messages.html"><img src="img/messages.png" class="messages" id="messages" alt="messages"></a>
+            <span class="unread-messages">3</span>
+        </div>
+        <div class="settings-icon">
+            <a href="settings.html"><img src="img/settings.png" class="settings" id="settings" alt="settings"></a>
+        </div>
+    </div>
+    <div class="show-conversion">
+        <span class="converted">≈ 0.00 €</span>
+    </div>
+    <section id="system-messages-send" class="block block-system-messages"></section>
+</div>
+
+<div class="border"></div>
+<!--PUT REFERALL AND NOTIFICATIONS/SETTINGS HERE-->
+
+    <div class="info-box">
+
+        <div class="control-panel">
+            <div class="welcome-message">
+                <!-- <img src="img/tom.jpg" class="profile-image" alt="profile-image"> -->
+                <h1>Welcome, <span class="user-name">Tom</span>!</h1>
+                <!--add progress bar here-->
+            </div>
+            <p>Complete Your Profile</p>
+            <div id="progress-area">
+            </div>
+            <div class="progress-block-space">
+            </div>
+            <form id="profile-completeness-form" action="" method="">
+                <span class="next-label">Next Task:</span>
+                  <div class="profile-question one">
+                        <span class="task">Add email address</span>
+                        <img src="img/rightarrow.png" alt="arrow">
+                        <hr>
+                        <input type="text" name="email" placeholder="E-mail" class="profile-input">
+                        <input type="submit" name="email-submit" class="profile-submit" value="go">
+                  </div>
+                  <div class="profile-question two">
+                        <span class="task">Add billing address</span>
+                        <img src="img/rightarrow.png" alt="arrow">
+                        <hr>
+                  </div>
+                  <span class="street">
+                            <input type="text" name="street-address" class="profile-input" placeholder="Street Address">
+                            <input type="submit" name="street-submit" class="profile-submit" value=">">
+                        </span>
+                        <span class="postal-code">
+                            <input type="text" name="postal-code" class="profile-input" placeholder="Postal Code">
+                            <input type="submit" name="postal-submit" class="profile-submit" value=">">
+                        </span>
+                        <span class="city">
+                            <input type="text" name="city" class="profile-input" placeholder="City">
+                            <input type="submit" name="city-submit" class="profile-submit" value=">">
+                        </span>
+                        <span class="country">
+                            <select name="country" id="select-country" class="select">
+                                <option value="AF">
+                                    Afghanistan
+                                </option>
+                                <option value="AL">
+                                    Albania
+                                </option>
+                                <option value="DZ">
+                                    Algeria
+                                </option>
+                                <option value="AS">
+                                    American Samoa
+                                </option>
+                                <option value="AD">
+                                    Andorra
+                                </option>
+                                <option value="AO">
+                                    Angola
+                                </option>
+                                <option value="AI">
+                                    Anguilla
+                                </option>
+                                <option value="AG">
+                                    Antigua and Barbuda
+                                </option>
+                                <option value="AR">
+                                    Argentina
+                                </option>
+                                <option value="AM">
+                                    Armenia
+                                </option>
+                                <option value="AW">
+                                    Aruba
+                                </option>
+                                <option value="AU">
+                                    Australia
+                                </option>
+                                <option value="AT">
+                                    Austria
+                                </option>
+                                <option value="AZ">
+                                    Azerbaijan
+                                </option>
+                                <option value="BS">
+                                    Bahamas
+                                </option>
+                                <option value="BH">
+                                    Bahrain
+                                </option>
+                                <option value="BD">
+                                    Bangladesh
+                                </option>
+                                <option value="BB">
+                                    Barbados
+                                </option>
+                                <option value="BY">
+                                    Belarus
+                                </option>
+                                <option value="BE">
+                                    Belgium
+                                </option>
+                                <option value="BZ">
+                                    Belize
+                                </option>
+                                <option value="BJ">
+                                    Benin
+                                </option>
+                                <option value="BM">
+                                    Bermuda
+                                </option>
+                                <option value="BT">
+                                    Bhutan
+                                </option>
+                                <option value="BO">
+                                    Bolivia
+                                </option>
+                                <option value="BA">
+                                    Bosnia and Herzegovina
+                                </option>
+                                <option value="BW">
+                                    Botswana
+                                </option>
+                                <option value="BR">
+                                    Brazil
+                                </option>
+                                <option value="VG">
+                                    British Virgin Islands
+                                </option>
+                                <option value="BN">
+                                    Brunei
+                                </option>
+                                <option value="BG">
+                                    Bulgaria
+                                </option>
+                                <option value="BF">
+                                    Burkina Faso
+                                </option>
+                                <option value="BI">
+                                    Burundi
+                                </option>
+                                <option value="KH">
+                                    Cambodia
+                                </option>
+                                <option value="CM">
+                                    Cameroon
+                                </option>
+                                <option value="CA">
+                                    Canada
+                                </option>
+                                <option value="CV">
+                                    Cape Verde
+                                </option>
+                                <option value="KY">
+                                    Cayman Islands
+                                </option>
+                                <option value="CF">
+                                    Central African Republic
+                                </option>
+                                <option value="TD">
+                                    Chad
+                                </option>
+                                <option value="CL">
+                                    Chile
+                                </option>
+                                <option value="CN">
+                                    China
+                                </option>
+                                <option value="CO">
+                                    Colombia
+                                </option>
+                                <option value="KM">
+                                    Comoros
+                                </option>
+                                <option value="CG">
+                                    Congo - Brazzaville
+                                </option>
+                                <option value="CD">
+                                    Congo - Kinshasa
+                                </option>
+                                <option value="CK">
+                                    Cook Islands
+                                </option>
+                                <option value="CR">
+                                    Costa Rica
+                                </option>
+                                <option value="CI">
+                                    Côte d’Ivoire
+                                </option>
+                                <option value="HR">
+                                    Croatia
+                                </option>
+                                <option value="CU">
+                                    Cuba
+                                </option>
+                                <option value="CY">
+                                    Cyprus
+                                </option>
+                                <option value="CZ">
+                                    Czech Republic
+                                </option>
+                                <option value="DK">
+                                    Denmark
+                                </option>
+                                <option value="DJ">
+                                    Djibouti
+                                </option>
+                                <option value="DM">
+                                    Dominica
+                                </option>
+                                <option value="DO">
+                                    Dominican Republic
+                                </option>
+                                <option value="EC">
+                                    Ecuador
+                                </option>
+                                <option value="EG">
+                                    Egypt
+                                </option>
+                                <option value="SV">
+                                    El Salvador
+                                </option>
+                                <option value="GQ">
+                                    Equatorial Guinea
+                                </option>
+                                <option value="ER">
+                                    Eritrea
+                                </option>
+                                <option value="EE">
+                                    Estonia
+                                </option>
+                                <option value="ET">
+                                    Ethiopia
+                                </option>
+                                <option value="FK">
+                                    Falkland Islands
+                                </option>
+                                <option value="FO">
+                                    Faroe Islands
+                                </option>
+                                <option value="FJ">
+                                    Fiji
+                                </option>
+                                <option value="FI">
+                                    Finland
+                                </option>
+                                <option value="FR">
+                                    France
+                                </option>
+                                <option value="GF">
+                                    French Guiana
+                                </option>
+                                <option value="PF">
+                                    French Polynesia
+                                </option>
+                                <option value="GA">
+                                    Gabon
+                                </option>
+                                <option value="GM">
+                                    Gambia
+                                </option>
+                                <option value="GE">
+                                    Georgia
+                                </option>
+                                <option value="DE">
+                                    Germany
+                                </option>
+                                <option value="GH">
+                                    Ghana
+                                </option>
+                                <option value="GI">
+                                    Gibraltar
+                                </option>
+                                <option value="GR">
+                                    Greece
+                                </option>
+                                <option value="GL">
+                                    Greenland
+                                </option>
+                                <option value="GD">
+                                    Grenada
+                                </option>
+                                <option value="GP">
+                                    Guadeloupe
+                                </option>
+                                <option value="GU">
+                                    Guam
+                                </option>
+                                <option value="GT">
+                                    Guatemala
+                                </option>
+                                <option value="GG">
+                                    Guernsey
+                                </option>
+                                <option value="GN">
+                                    Guinea
+                                </option>
+                                <option value="GW">
+                                    Guinea-Bissau
+                                </option>
+                                <option value="GY">
+                                    Guyana
+                                </option>
+                                <option value="HT">
+                                    Haiti
+                                </option>
+                                <option value="HN">
+                                    Honduras
+                                </option>
+                                <option value="HK">
+                                    Hong Kong SAR China
+                                </option>
+                                <option value="HU">
+                                    Hungary
+                                </option>
+                                <option value="IS">
+                                    Iceland
+                                </option>
+                                <option value="IN">
+                                    India
+                                </option>
+                                <option value="ID">
+                                    Indonesia
+                                </option>
+                                <option value="IR">
+                                    Iran
+                                </option>
+                                <option value="IQ">
+                                    Iraq
+                                </option>
+                                <option value="IE">
+                                    Ireland
+                                </option>
+                                <option value="IM">
+                                    Isle of Man
+                                </option>
+                                <option value="IL">
+                                    Israel
+                                </option>
+                                <option value="IT">
+                                    Italy
+                                </option>
+                                <option value="JM">
+                                    Jamaica
+                                </option>
+                                <option value="JP">
+                                    Japan
+                                </option>
+                                <option value="JE">
+                                    Jersey
+                                </option>
+                                <option value="JO">
+                                    Jordan
+                                </option>
+                                <option value="KZ">
+                                    Kazakhstan
+                                </option>
+                                <option value="KE">
+                                    Kenya
+                                </option>
+                                <option value="KI">
+                                    Kiribati
+                                </option>
+                                <option value="KW">
+                                    Kuwait
+                                </option>
+                                <option value="KG">
+                                    Kyrgyzstan
+                                </option>
+                                <option value="LA">
+                                    Laos
+                                </option>
+                                <option value="LV">
+                                    Latvia
+                                </option>
+                                <option value="LB">
+                                    Lebanon
+                                </option>
+                                <option value="LS">
+                                    Lesotho
+                                </option>
+                                <option value="LR">
+                                    Liberia
+                                </option>
+                                <option value="LY">
+                                    Libya
+                                </option>
+                                <option value="LI">
+                                    Liechtenstein
+                                </option>
+                                <option value="LT">
+                                    Lithuania
+                                </option>
+                                <option value="LU">
+                                    Luxembourg
+                                </option>
+                                <option value="MO">
+                                    Macau SAR China
+                                </option>
+                                <option value="MK">
+                                    Macedonia
+                                </option>
+                                <option value="MG">
+                                    Madagascar
+                                </option>
+                                <option value="MW">
+                                    Malawi
+                                </option>
+                                <option value="MY">
+                                    Malaysia
+                                </option>
+                                <option value="MV">
+                                    Maldives
+                                </option>
+                                <option value="ML">
+                                    Mali
+                                </option>
+                                <option value="MT">
+                                    Malta
+                                </option>
+                                <option value="MH">
+                                    Marshall Islands
+                                </option>
+                                <option value="MQ">
+                                    Martinique
+                                </option>
+                                <option value="MR">
+                                    Mauritania
+                                </option>
+                                <option value="MU">
+                                    Mauritius
+                                </option>
+                                <option value="YT">
+                                    Mayotte
+                                </option>
+                                <option value="FX">
+                                    Metropolitan France
+                                </option>
+                                <option value="MX">
+                                    Mexico
+                                </option>
+                                <option value="FM">
+                                    Micronesia
+                                </option>
+                                <option value="MD">
+                                    Moldova
+                                </option>
+                                <option value="MC">
+                                    Monaco
+                                </option>
+                                <option value="MN">
+                                    Mongolia
+                                </option>
+                                <option value="ME">
+                                    Montenegro
+                                </option>
+                                <option value="MS">
+                                    Montserrat
+                                </option>
+                                <option value="MA">
+                                    Morocco
+                                </option>
+                                <option value="MZ">
+                                    Mozambique
+                                </option>
+                                <option value="MM">
+                                    Myanmar [Burma]
+                                </option>
+                                <option value="NA">
+                                    Namibia
+                                </option>
+                                <option value="NR">
+                                    Nauru
+                                </option>
+                                <option value="NP">
+                                    Nepal
+                                </option>
+                                <option value="NL">
+                                    Netherlands
+                                </option>
+                                <option value="AN">
+                                    Netherlands Antilles
+                                </option>
+                                <option value="NT">
+                                    Neutral Zone
+                                </option>
+                                <option value="NC">
+                                    New Caledonia
+                                </option>
+                                <option value="NZ">
+                                    New Zealand
+                                </option>
+                                <option value="NI">
+                                    Nicaragua
+                                </option>
+                                <option value="NE">
+                                    Niger
+                                </option>
+                                <option value="NG">
+                                    Nigeria
+                                </option>
+                                <option value="NU">
+                                    Niue
+                                </option>
+                                <option value="NF">
+                                    Norfolk Island
+                                </option>
+                                <option value="KP">
+                                    North Korea
+                                </option>
+                                <option value="MP">
+                                    Northern Mariana Islands
+                                </option>
+                                <option value="NO">
+                                    Norway
+                                </option>
+                                <option value="OM">
+                                    Oman
+                                </option>
+                                <option value="PK">
+                                    Pakistan
+                                </option>
+                                <option value="PW">
+                                    Palau
+                                </option>
+                                <option value="PS">
+                                    Palestinian Territories
+                                </option>
+                                <option value="PA">
+                                    Panama
+                                </option>
+                                <option value="PG">
+                                    Papua New Guinea
+                                </option>
+                                <option value="PY">
+                                    Paraguay
+                                </option>
+                                <option value="YD">
+                                    People's Democratic Republic of Yemen
+                                </option>
+                                <option value="PE">
+                                    Peru
+                                </option>
+                                <option value="PH">
+                                    Philippines
+                                </option>
+                                <option value="PN">
+                                    Pitcairn Islands
+                                </option>
+                                <option value="PL">
+                                    Poland
+                                </option>
+                                <option value="PT">
+                                    Portugal
+                                </option>
+                                <option value="PR">
+                                    Puerto Rico
+                                </option>
+                                <option value="QA">
+                                    Qatar
+                                </option>
+                                <option value="RE">
+                                    Réunion
+                                </option>
+                                <option value="RO">
+                                    Romania
+                                </option>
+                                <option value="RU">
+                                    Russia
+                                </option>
+                                <option value="RW">
+                                    Rwanda
+                                </option>
+                                <option value="BL">
+                                    Saint Barthélemy
+                                </option>
+                                <option value="SH">
+                                    Saint Helena
+                                </option>
+                                <option value="KN">
+                                    Saint Kitts and Nevis
+                                </option>
+                                <option value="LC">
+                                    Saint Lucia
+                                </option>
+                                <option value="MF">
+                                    Saint Martin
+                                </option>
+                                <option value="PM">
+                                    Saint Pierre and Miquelon
+                                </option>
+                                <option value="VC">
+                                    Saint Vincent and the Grenadines
+                                </option>
+                                <option value="WS">
+                                    Samoa
+                                </option>
+                                <option value="SM">
+                                    San Marino
+                                </option>
+                                <option value="ST">
+                                    São Tomé and Príncipe
+                                </option>
+                                <option value="SA">
+                                    Saudi Arabia
+                                </option>
+                                <option value="SN">
+                                    Senegal
+                                </option>
+                                <option value="RS">
+                                    Serbia
+                                </option>
+                                <option value="CS">
+                                    Serbia and Montenegro
+                                </option>
+                                <option value="SC">
+                                    Seychelles
+                                </option>
+                                <option value="SL">
+                                    Sierra Leone
+                                </option>
+                                <option value="SG">
+                                    Singapore
+                                </option>
+                                <option value="SK">
+                                    Slovakia
+                                </option>
+                                <option value="SI">
+                                    Slovenia
+                                </option>
+                                <option value="SB">
+                                    Solomon Islands
+                                </option>
+                                <option value="SO">
+                                    Somalia
+                                </option>
+                                <option value="ZA">
+                                    South Africa
+                                </option>
+                                <option value="KR">
+                                    South Korea
+                                </option>
+                                <option value="ES">
+                                    Spain
+                                </option>
+                                <option value="LK">
+                                    Sri Lanka
+                                </option>
+                                <option value="SD">
+                                    Sudan
+                                </option>
+                                <option value="SR">
+                                    Suriname
+                                </option>
+                                <option value="SJ">
+                                    Svalbard and Jan Mayen
+                                </option>
+                                <option value="SZ">
+                                    Swaziland
+                                </option>
+                                <option value="SE">
+                                    Sweden
+                                </option>
+                                <option value="CH">
+                                    Switzerland
+                                </option>
+                                <option value="SY">
+                                    Syria
+                                </option>
+                                <option value="TW">
+                                    Taiwan
+                                </option>
+                                <option value="TJ">
+                                    Tajikistan
+                                </option>
+                                <option value="TZ">
+                                    Tanzania
+                                </option>
+                                <option value="TH">
+                                    Thailand
+                                </option>
+                                <option value="TL">
+                                    Timor-Leste
+                                </option>
+                                <option value="TG">
+                                    Togo
+                                </option>
+                                <option value="TK">
+                                    Tokelau
+                                </option>
+                                <option value="TO">
+                                    Tonga
+                                </option>
+                                <option value="TT">
+                                    Trinidad and Tobago
+                                </option>
+                                <option value="TN">
+                                    Tunisia
+                                </option>
+                                <option value="TR">
+                                    Turkey
+                                </option>
+                                <option value="TM">
+                                    Turkmenistan
+                                </option>
+                                <option value="TC">
+                                    Turks and Caicos Islands
+                                </option>
+                                <option value="TV">
+                                    Tuvalu
+                                </option>
+                                <option value="VI">
+                                    U.S. Virgin Islands
+                                </option>
+                                <option value="UG">
+                                    Uganda
+                                </option>
+                                <option value="UA">
+                                    Ukraine
+                                </option>
+                                <option value="AE">
+                                    United Arab Emirates
+                                </option>
+                                <option value="GB">
+                                    United Kingdom
+                                </option>
+                                <option value="US" selected="selected">
+                                    United States
+                                </option>
+                                <option value="UY">
+                                    Uruguay
+                                </option>
+                                <option value="UZ">
+                                    Uzbekistan
+                                </option>
+                                <option value="VU">
+                                    Vanuatu
+                                </option>
+                                <option value="VA">
+                                    Vatican City
+                                </option>
+                                <option value="VE">
+                                    Venezuela
+                                </option>
+                                <option value="VN">
+                                    Vietnam
+                                </option>
+                                <option value="WF">
+                                    Wallis and Futuna
+                                </option>
+                                <option value="EH">
+                                    Western Sahara
+                                </option>
+                                <option value="YE">
+                                    Yemen
+                                </option>
+                                <option value="ZM">
+                                    Zambia
+                                </option>
+                                <option value="ZW">
+                                    Zimbabwe
+                                </option>
+                                <option value="AX">
+                                    Åland Islands
+                                </option>
+                            </select>
+                            <input type="submit" name="country-submit" class="profile-submit" value=">">
+                        </span>
+        </form>
+        <div class="complete">
+            Congrats, you've done it all!
+        </div>
+        </div>
+
+        <div class="balances" id="balances">
+            <div class="view-selectors">
+                <h1>Balance</h1>
+            </div>
+            <div class="block account btc" id="btc-balance">
+                <ul id="viewtoggle">
+                    <li id="btc"><a href="#">btc</a></li>
+                    <li id="euro"><a href="#">euro</a></li>
+                </ul>
+                <div class="balance">
+                    <span id="bal_btc" class="value">2.27</span>
+                    <h2 class="type btc">BTC</h2>
+                    <span class="converted">≈ 0.00 €</span>
+                </div>
+                <div class="btc-buttons">
+                    <button id="btc-buy">Buy</button>
+                    <button id="btc-sell">Sell</button>
+                </div>
+            </div>
+            <div class="block account euro" id="euro-balance">
+                <ul id="viewtoggle-euro">
+                    <li id="btc-euro"><a href="#">btc</a></li>
+                    <li id="euro-euro"><a href="#">euro</a></li>
+                </ul>
+                <div class="balance">
+                    <span id="bal_euro" class="value">85.00</span>
+                    <h2 class="type-euro">euro</h2>
+                    <span class="converted">≈ 0.00000000 BTC</span>
+                </div>
+                <div class="euro-buttons">
+                    <button id="euro-deposit">Deposit</button>
+                    <button id="euro-withdrawal">Withdrawal</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="wallet" id="wallet">
+            <div class="qr">
+                <img src="img/qrcode.png" alt="wallet" id="wallet-qr">
+            </div>
+            <div id="wallet-info">
+                <p id="wallet-name">Main Wallet</p>
+                <p id="wallet-balance">0.0023 BTC</p>
+                <span class="btc-address" id="btc-address">1JuBoovp6uNVZETadvBzCTTDCaNJCKcz16</span>
+                <button id="share-wallet">Share</button>
+            </div>
+            <div class="social-share">
+                <a href="http://www.facebook.com/share.php?u=www.coinmotion.com&title=My btc wallet is:" target="_blank">
+                    <img src="img/facebook.png" class="share-icon facebook" alt="facebook">
+                </a>
+                <a href="http://twitter.com/home?status=Send me btc at:+www.coinmotion.com" target="_blank">
+                    <img src="img/twitter.png" class="share-icon twitter" alt="twitter">
+                </a>
+                <a href="mailto:?subject=Send me btc!&body=Check out this site I came across www.coinmotion.com" target="_blank">
+                    <img src="img/mail.png" class="share-icon mail" alt="mail">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+        <div class="bottom-box">
+            <div class="table-label">
+                <h1>Recent Transactions</h1>
+                <a href="">(VIEW ALL)</a>
+            </div>
+            <div class="transaction-border"></div>
+            <div class="field transactions" id="transactions">
+                <table class="table transactions table-responsive">
+                    <tbody>
+                        <tr class="transaction-info">
+                            <td class="direction">Sent</td>
+                            <td class="transaction-amount">0.125 BTC</td>
+                            <td class="to-from">to</td>
+                            <td class="account-address">1JuBoovp6uNVZETadvBzCTTDCaNJCKcz16</td>
+                            <td class="time-passed">2 days ago</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+        </div>
+
+
+
+<div id="buy-btc">
+    <section class="block quick-buy">
+    <form class="form autoform" id="form-buy" action="/en/buy?ajax_content=true#buy" method="post">
+        <div class="grid-1">
+            <div class="col-1">
+                <div class="field form-field latest-price">
+                    <label class="form-label">Latest price</label>
+                    <div class="special-value">
+                        <span class="original" id="ask">304.44 € / 1 BTC</span>
+                    </div>
+                </div>
+                <div class="field form-field available">
+                    <label class="form-label">Available</label>
+                    <div class="special-value">
+                        <span class="original" id="avl_cur">0.00 €</span> <span class="converted" id="cnva_btc">≈ 0.00000000 BTC</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="field form-field amount">
+                    <input type="text" name="amount" id="input-amount-buy" value="" class="input" placeholder="1.025" /> <select name="currency" id="select-status" class="select">
+                        <option value="btc" selected="selected">
+                            BTC
+                        </option>
+                        <option value="eur">
+                            €
+                        </option>
+                    </select>
+                </div>
+                <div class="field form-field calculation">
+                    <div class="field form-field calculation">
+                        <table>
+                            <tbody>
+                                <tr class="amount">
+                                    <th>
+                                        Amount
+                                    </th>
+                                    <td id="btc-transaction-amount">
+                                        0.00000000 BTC
+                                    </td>
+                                </tr>
+                                <tr class="subtotal">
+                                    <th>
+                                        Sum
+                                    </th>
+                                    <td id="amt">
+                                        0.00 €
+                                    </td>
+                                </tr>
+                                <tr class="commission-fee">
+                                    <th>
+                                        Commission fee
+                                    </th>
+                                    <td id="fee">
+                                        0.00 €
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="total">
+                                    <th>
+                                        Total
+                                    </th>
+                                    <td id="tot">
+                                        0.00 €
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field form-field submit">
+            <input class="button" id="button-submit" name="buy" type="submit" value="Buy" />
+        </div><input type="hidden" name="buy" value="true" />
+    </form>
+<section id="system-messages-buy" class="block block-system-messages"></section>
+</section>
+</div>
+
+
+<a name="sell"></a>
+<div id="sell-btc">
+<section class="block quick-sell">
+    <form class="form autoform" id="form-sell" action="/en/sell?ajax_content=true#sell" method="post">
+        <div class="grid-1">
+            <div class="col-1">
+                <div class="field form-field latest-price">
+                    <label class="form-label">Latest price</label>
+                    <div class="special-value">
+                        <span class="original" id="bid">296.91 € / 1 BTC</span>
+                    </div>
+                </div>
+                <div class="field form-field available">
+                    <label class="form-label">Available</label>
+                    <div class="special-value">
+                        <span class="original" id="avl_btc">0.00000000 BTC</span> <span class="converted" id="cnvb_cur">≈ 0.00 €</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="field form-field amount">
+                    <label class="form-label" for="input-amount-sell"></label> <input type="text" name="amount" id="input-amount-sell" value="" class="input" placeholder="110.05"/> <select name="currency" id="select-status" class="select">
+                        <option value="btc">
+                            BTC
+                        </option>
+                        <option value="eur" selected="selected">
+                            €
+                        </option>
+                    </select> 
+                </div>
+                <div class="field form-field calculation">
+                    <div class="field form-field calculation">
+                        <table>
+                            <tbody>
+                                <tr class="amount">
+                                    <th>
+                                        Amount
+                                    </th>
+                                    <td id="btc-transaction-amount">
+                                        0.00000000 BTC
+                                    </td>
+                                </tr>
+                                <tr class="subtotal">
+                                    <th>
+                                        Sum
+                                    </th>
+                                    <td id="amt">
+                                        0.00 €
+                                    </td>
+                                </tr>
+                                <tr class="commission-fee">
+                                    <th>
+                                        Commission fee
+                                    </th>
+                                    <td id="fee">
+                                        0.00 €
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="total">
+                                    <th>
+                                        Total
+                                    </th>
+                                    <td id="tot">
+                                        0.00 €
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field form-field submit">
+            <input class="button" id="button-submit" name="sell" type="submit" value="Sell" />
+        </div><input type="hidden" name="sell" value="true" />
+    </form>
+    <div class="sell-alert-message">
+        <div class="sell-green"></div>
+        <div class="sell-yellow"></div>
+        <div class="sell-red"></div>
+    </div>
+</section>
+</div>
+<section id="system-messages-sell" class="block block-system-messages"></section>
+<a name="withdraw"></a>
+
+
+<div id="withdrawal-euro">
+    <section id="system-messages-withdraw" class="block block-system-messages">
+        <div class="system-message information">
+            To withdraw funds, you need to <a href="/en/identify">verify your identity</a>
+        </div>
+    </section>
+    <section class="block withdraw-details">
+        <div class="field body">
+            <p>
+                Withdrawals are processed during the next banking day. Depending on your bank a withdrawal can take 1-3 banking days.
+            </p>
+        </div>
+        <div class="field form-field bank-account">
+            <span class="form-label">Bank account</span>
+            <div class="form-value">
+                <div class="iban">
+                    You have not set a bank account
+                </div><a class="link-change" href="/en/bank_account">Change bank account</a>
+            </div>
+        </div><a name="withdraw"></a>
+        <form class="form autoform" id="form-withdraw" action="#" method="post">
+            <div class="field form-field available">
+                <label class="form-label">Available</label>
+                <div class="special-value">
+                    <span class="original" id="avl_cur">0.00 €</span> <span class="converted" id="cnva_btc">≈ 0.00000000 BTC</span>
+                </div>
+            </div>
+            <div class="field form-field transaction-fee">
+                <label class="form-label">Withdraw fee</label>
+                <div class="special-value">
+                    <span class="original">0.90 €</span>
+                </div>
+            </div>
+            <div class="field form-field amount">
+                <input type="text" name="amount" id="input-amount-withdraw" value="" class="input" /> <span class="converted" id="cnv">€ ≈ 0.00000000 BTC</span>
+            </div>
+            <div class="field form-field submit">
+                <input class="button" name="withdraw" type="submit" value="Withdraw" id="button-submit"/>
+            </div><input type="hidden" name="withdraw" value="true" />
+        </form>
+        <div class="withdraw-alert-message">
+            <div class="withdraw-green"></div>
+            <div class="withdraw-yellow"></div>
+            <div class="withdraw-red"></div>
+        </div>
+    </section>
+</div>
+<section id="system-messages-withdraw" class="block block-system-messages"></section>
+
+
+<div id ="deposit-euro">
+
+<section class="block deposit-details">
+    <div class="field body">
+        <p class="deposit-info">
+            Deposit funds on to your Coinmotion account via SEPA transfer (whole SEPA region) or instantly using Maksukaista (Finland) or SOFORT Banking (Austria, Belgium, France, Germany, Hungary, Italy, Netherlands, Poland, Spain and Switzerland)
+        </p>
+        <h4>
+            Choose a payment method
+        </h4>
+    </div>
+    <div class="field actions">
+        <p>
+            <a id="button-payment-sepa" class="button-logo" href="#">
+                <img src="img/logo-payment-sepa.png" alt="SEPA" title="SEPA" class="pmt-button" id="sepa-button"/>
+            </a> 
+            <a id="button-payment-pbw" class="button-logo" href="#">
+                <img src="img/logo-payment-maksukaista.png" alt="Maksukaista" title="Maksukaista" class="pmt-button" id="pbw-button"/>
+            </a> 
+            <a id="button-payment-sofort" class="button-logo" href="#">
+                <img src="img/logo-payment-sofort.png" alt="Sofort" title="Sofort" class="pmt-button" id="sofort-button"/>
+            </a>
+        </p>
+    </div>
+<a name="deposit_pbw"></a>
+    <div class="wrapper payment-pbw">
+        <div class="change-bank"><a class="change-selection">Change Selection</a></div>
+        <form class="form autoform" id="form-deposit-pbw" action="#" method="post">
+            <div class="field form-field amount">
+                <label class="form-label" for="input-amount-pbw">Amount *</label> <input type="text" name="amount_cur" id="input-amount-pbw" value="" class="input" /> <span class="converted" id="cnv-pbw">€ ≈ 0.00000000 BTC</span>
+            </div>
+            <div class="controls">
+                <div class="field form-field submit">
+                    <input class="button" name="deposit_pbw" type="submit" value="Proceed to payment" />
+                </div><input type="hidden" name="deposit_pbw" value="true" /><input type="hidden" name="MERCHANT_ID" value="" /><input type="hidden" name="AMOUNT" value="" /><input type="hidden" name="CURRENCY" value="EUR" /><input type="hidden" name="ORDER_NUMBER" value="" /><input type="hidden" name="LANG" value="EN" /><input type="hidden" name="EMAIL" value="chelsea@padgham.com" /><input type="hidden" name="RETURN_ADDRESS" value="https://coinmotion.com/en/deposit" /><input type="hidden" name="CANCEL_ADDRESS" value="https://coinmotion.com/en/deposit" /><input type="hidden" name="SELECTED" value="BANKS" /><input type="hidden" name="AUTHCODE" value="" />
+            </div>
+        </form>
+        <div class="deposit-alert-message">
+            <div class="deposit-green"></div>
+            <div class="deposit-yellow"></div>
+            <div class="deposit-red"></div>
+        </div>
+    </div><a name="deposit_sofort"></a>
+    <div class="wrapper payment-sofort">
+        <div class="change-bank"><a class="change-selection">Change Selection</a></div>
+        <form class="form autoform" id="form-deposit-sofort" action="" method="post">
+            <p class="dim">
+                Sofort Banking has a 2 % processing fee.
+            </p>
+            <div class="field form-field amount">
+                <label class="form-label" for="input-amount-sofort">Amount *</label> <input type="text" name="amount_cur" id="input-amount-sofort" value="" class="input" /> <span class="converted" id="cnv-sofort">€ ≈ 0.00000000 BTC</span>
+            </div>
+            <div class="controls">
+                <div class="field form-field submit">
+                    <input class="button" name="deposit_sofort" type="submit" value="Proceed to payment" />
+                </div><input type="hidden" name="deposit_sofort" value="true" /><input type="hidden" name="RETURN_ADDRESS" value="https://coinmotion.com/en/deposit" /><input type="hidden" name="CANCEL_ADDRESS" value="https://coinmotion.com/en/deposit" />
+            </div>
+        </form>
+        <div class="deposit-alert-message">
+            <div class="deposit-green"></div>
+            <div class="deposit-yellow"></div>
+            <div class="deposit-red"></div>
+        </div>
+    </div><a name="deposit_bank"></a>
+    <div class="wrapper payment-sepa">
+        <div class="change-bank"><a class="change-selection">Change Selection</a></div> 
+        <form class="form autoform" id="form-deposit-bank" action="#" method="post">
+            <div class="field form-field amount">
+                <label class="form-label" for="input-amount-bank-transfer">Amount *</label> <input type="text" name="amount" id="input-amount-bank-transfer" value="" class="input" /> <span class="converted" id="cnv-bank-transfer">€ ≈ 0.00000000 BTC</span>
+            </div>
+            <div class="controls">
+                <div class="field form-field submit">
+                    <input class="button" name="deposit_bank" type="submit" value="Make payment" />
+                </div><input type="hidden" name="deposit_bank" value="true" id="sepa-submit"/>
+            </div>
+        </form>
+        <div class="deposit-alert-message">
+            <div class="deposit-green"></div>
+            <div class="deposit-yellow"></div>
+            <div class="deposit-red"></div>
+        </div>
+    </div><a name="deposit_bank_ready"></a>
+    <div class="wrapper payment-sepa-ready">
+        <form class="form autoform" id="form-deposit-bank-ready" action="#" method="post">
+            <div class="field form-field bank-account">
+                <label class="form-label">Recipient's account number OP-Pohjola</label>
+                <div class="form-value">
+                    <div class="iban">
+                        IBAN: FI95 5780 3820 0954 86
+                    </div>
+                    <div class="bic">
+                        BIC: OKOYFIHH
+                    </div>
+                </div>
+            </div>
+            <div class="field form-field receiver">
+                <label class="form-label">Recipient</label>
+                <div class="form-value">
+                    Coinmotion Oy
+                </div>
+            </div>
+            <div class="field form-field receiver">
+                <label class="form-label">Recipient's address</label>
+                <div class="form-value">
+                    Hiomotie 19, 00380 Helsinki
+                </div>
+            </div>
+            <div class="field form-field receiver">
+                <label class="form-label">Recipient's country</label>
+                <div class="form-value">
+                    Finland
+                </div>
+            </div>
+            <div class="field form-field reference-number">
+                <label class="form-label">Reference</label>
+                <div class="form-value">
+                    100 29958
+                </div>
+                <div class="form-hint">
+                    If reference number is not supported use message field
+                </div>
+            </div>
+            <div class="field form-field amount">
+                <label class="form-label" for="input-amount-bank-transfer-ready">Amount</label>
+                <div class="form-value" id="input-amount-bank-transfer-ready">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="field form-field deadline">
+                <label class="form-label">Due date</label>
+                <div class="form-value">
+                    20.10.2014
+                </div>
+            </div>
+            <p class="dim">
+                SEPA transfers are processed within one day once the funds arrive.
+            </p>
+        </form>
+    </div>
+    </section>
+
+</div>
+
+
+
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/jquery.simplemodal.1.4.4.min.js"></script>
+<script src="js/jquery.sidr.min.js"></script>
+<script src="js/nanobar.min.js"></script>
+<script src="js/wallet.js"></script>
+<!--
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+-->
+</body>
+
+
+
+
+
+

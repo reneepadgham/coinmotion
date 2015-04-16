@@ -1,0 +1,820 @@
+
+
+
+
+
+/****************************
+		GENERAL
+****************************/
+
+
+
+header, body, h1, h2, h3, h4, p, nav, a, button {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+}
+
+h1 {
+	font-weight: 200;
+	font-size: 1.5em;
+	display: block;
+	margin: auto auto;
+}
+
+
+a {
+	font-weight: 300;
+	color: #886fad;
+}
+
+
+button {
+	background: transparent;
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: #886fad;
+	border-style: solid;
+	padding: 5px 1%;
+	color: #886fad;
+}
+
+.border {
+	width: 80%;
+  	height: 2px;
+  	margin: 20px auto;
+  	background: -webkit-linear-gradient(left, #886fad, #47ACFB); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(right, #886fad, #47ACFB); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(right, #886fad, #47ACFB); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(to right, #886fad, #47ACFB); /* Standard syntax */
+}
+
+::-webkit-input-placeholder {
+   color: #AAAAAB;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #AAAAAB;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #AAAAAB;  
+}
+
+:-ms-input-placeholder {  
+   color: #AAAAAB;  
+}
+
+
+
+
+
+/****************************
+		NAVIGATION
+****************************/
+
+
+
+nav {
+	background: #886fad;
+	height: 35px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 15px 0;
+}
+
+nav ul li {
+	list-style: none;
+	display: inline-block;
+}
+
+.main-nav {
+	width: 80%;
+	margin: auto auto;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+	padding: 0 15%;
+	font-weight: 300;
+}
+
+nav button {
+	background: none;
+	border-style: none;
+	padding: 4% 0;
+	width: 80px;
+}
+
+nav ul .main-nav {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	padding-left: 0;
+	margin: auto auto;
+	vertical-align: middle;
+}
+
+.main-nav {
+	height: 55px;
+	padding-left: 0;
+	text-align: center;
+	margin-top: 8px;
+}
+
+.logo-area {
+	width: 15%;
+	float: left;
+}
+
+.logo {
+	display: inline-block;
+	width: 100%;
+	vertical-align: middle;
+	padding-bottom: 10px;
+}
+
+.main-links {
+	float: right;
+}
+
+
+/****************************
+		WALLET PAGE
+****************************/
+
+
+
+
+
+	/****************************
+			TOP BOX
+	****************************/
+
+
+
+	.top-box {
+		max-width: 80%;
+		display: block;
+		position: relative;
+		padding-top: 95px;
+		margin: auto auto;
+	}
+
+
+	.page-divider {
+		width: 80%;
+		margin: 15px auto;
+	}
+
+	.send {
+		color: #626262;
+		text-transform: uppercase;
+		font-size: .85em;
+		width: 60%;
+		margin: auto auto;
+		float: left;
+		text-align: center;
+	}
+
+	.amount {
+		width: 40px;
+		border-radius: 5px;
+		border-style: solid;
+		border-color: #9c9fa1;
+		border-width: 1px;
+		text-align: center;
+		margin: 0 5px;
+	}
+
+	.address {
+		width: 300px;
+		border-radius: 5px;
+		border-style: solid;
+		border-color: #9c9fa1;
+		border-width: 1px;
+		text-align: center;
+		margin: 0 5px;
+	}
+
+	.send-btc {
+		background: transparent;
+		border-radius: 5px;
+		border-width: 1px;
+		border-color: #47ACFB;
+		border-style: solid;
+		padding: 3px 20px;
+		color: #47ACFB;
+		margin-left: 10px;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+	.top-buttons {
+		width: 20%;
+		display: inline-block;
+		text-align: center;
+		margin-top: 3px;
+	}
+
+	.top-buttons img {
+		width: 10%;
+		padding: 0 5%;
+	}
+
+	#ask_price {
+		font-size: .85em;
+		color: #626262;
+	}
+
+	.btc-ticker {
+		width: 20%;
+		display: inline-block;
+		float: left;
+		text-align: center;
+	}
+
+	.show-conversion {
+		width: 20%;
+		display: block;
+		margin: auto auto;
+		text-align: center;
+		margin-bottom: -20px;
+		display: none;
+	}
+
+	.show-conversion .converted {
+		color: #363f54;
+	}
+
+
+
+
+	/****************************
+			INFO BOX
+	****************************/
+
+
+
+	.info-box {
+		display: block;
+		position: relative;
+		height: 40%;
+		width: 80%;
+		margin: auto auto;
+	}
+
+	.view-selectors {
+		display: inline-block;
+		float: left;
+		width: 100%;
+		margin: auto auto;
+		text-align: center;
+	}
+
+	.balances {
+		width:30%;
+		display: inline-block;
+		padding: 0 2%;
+		margin: auto auto;
+	}
+
+	.wallet {
+		width: 25%;
+		margin: auto auto;
+		text-align: center;
+		display: inline-block;
+	}
+
+	.view-selectors ul {
+		margin: auto auto;
+		padding-left: 0;
+		padding-bottom: 20px;
+	}
+
+	.view-selectors ul li {
+		list-style: none;
+		display: inline-block;
+		padding: 0 15px;
+		margin: auto auto;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 300;
+	}
+
+	.wallet img {
+		max-width: 60%;
+	}
+
+	#wallet-name, #wallet-balance {
+		display: inline-block;
+		padding: 0 1%;
+	}
+
+	#wallet-balance {
+		color: #47ACFB;
+	}
+
+	#share-wallet {
+		display: block;
+		margin: auto auto;
+		padding: 5px 40px;
+	}
+
+	.btc, .euro {
+		display: block;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	#btc-balance {
+		display: inline-block;
+		margin-left: 13%;
+	}
+
+	#euro-balance {
+		display: inline-block;
+	}
+
+	.type {
+		display: inline-block;
+	}
+
+	.euro {
+		display: none;
+	}
+
+	.btc-address {
+		clear: both;
+		display: block;
+		line-height: 1em;
+		font-size: .6em;
+	}
+
+	.value {
+		font-size: 2em;
+		color: #363f54;
+	}
+
+	.type {
+		font-size: 2em;
+		font-weight: 400;
+		padding-left: 10px;
+		margin-bottom: 0;
+	}
+
+	h2.type-euro {
+		color: #886fad;
+		font-size: 2em;
+		font-weight: 400;
+		padding-left: 10px;
+		margin-bottom: 0;
+		display: inline-block;
+	}
+
+	h2.type.btc {
+		color: #47ACFB;
+	}
+
+	.view-selectors h1 {
+		padding-bottom:  35px;
+	}
+
+	.converted {
+		clear: both;
+		display: block;
+		margin: auto auto;
+		padding-bottom: 15px;
+	}
+
+
+	.btc-buttons button, .euro-buttons button{
+		width: 120px;
+		margin: 0 5px;
+	}
+
+	.converted {
+		color: #9c9fa1;
+	}
+
+	.btc-address {
+		margin-top: -10px;
+		padding-bottom: 20px;
+	}
+
+	#wallet-info {
+		margin-top: -10px;
+	}
+
+	.control-panel {
+		width: 30%;
+		display: inline-block;
+		margin: auto auto;
+		padding: 0 2%;
+		padding-left: 5%;
+	}
+
+	.profile-image {
+		width: 35%;
+		border-radius: 50%;
+	}
+
+
+	.welcome-message h2 {
+		font-weight: 400;
+		margin-left: 135px;
+	}
+
+	#wallet-name {
+		padding-top: 5px;
+	}
+
+	.control-panel ul li {
+		list-style: none;
+		text-transform: uppercase;
+		font-weight: 300;
+	}
+
+	.control-panel ul li img {
+		width: 20px;
+		margin-right: 10px;
+		float: right;
+	}
+
+	.control-panel ul li img, .control-panel ul li p {
+		display: inline-block;
+	} 
+
+	.objectives {
+		padding-left: 0;
+	}
+
+	.control-panel ul li p{
+		margin: 2px 0;
+	}
+
+	.control-panel ul li a p{
+		font-size: .75em;
+		text-decoration: none;
+	}
+
+	.control-panel ul li a {
+		text-decoration: none;
+	}
+
+	.points {
+		color: #000;
+		font-weight: 600;
+	}
+
+	.task {
+		font-weight: 400;
+	}
+
+	.welcome-message img {
+		float: left;
+	}
+
+	.welcome-message {
+		display: block;
+		height: 110px;
+	}
+
+
+	.balance {
+		padding-bottom: 35px;
+	}
+
+	#euro-balance {
+		display: none;
+	}
+
+	#viewtoggle li {
+		list-style: none;
+		display: inline-block;
+		text-align: center;
+		margin: auto 0px;
+	}
+
+	#viewtoggle {
+		text-align: center;
+		margin: auto auto;
+		padding-left: 0;
+	}
+
+
+	#euro-balance #viewtoggle #btc a {
+		text-decoration: none;
+		color: #363f54;
+		padding: 5px 25px;
+		border-radius: 5px 0 0 5px;
+		background-color: #E8D9FF;
+		margin-right: -3px;
+	}
+
+	#euro-balance #viewtoggle #euro a {
+		text-decoration: none;
+		color: #fff;
+		text-decoration: none;
+		background-color: #886FAD;
+		font-weight: 500;
+		padding: 5px 20px;
+		border-radius: 0 5px 5px 0;
+		margin-left: -3px;
+	}
+
+	#btc-balance #viewtoggle #btc a {
+		text-decoration: none;
+		background-color: #47ACFB;
+		font-weight: 500;
+		color: #fff;
+		padding: 5px 25px;
+		border-radius: 5px 0 0 5px;
+		margin-right: -3px;
+	}
+
+	#btc-balance #viewtoggle #euro a {
+		text-decoration: none;
+		color: #363f54;
+		padding: 5px 20px;
+		border-radius: 0 5px 5px 0;
+		background-color: #D9EEFF;
+		margin-left: -3px;
+	}
+
+	#btc-balance #viewtoggle #euro a:hover, #btc-balance #viewtoggle #btc a:hover {
+		cursor: pointer;
+		cursor: hand;
+	}
+
+	
+
+
+
+
+	/****************************
+			BOTTOM BOX
+	****************************/
+
+
+
+	.bottom-box {
+		display: block;
+		clear: both;
+		width: 80%;
+		margin: auto auto;
+		padding-top: 40px;
+		font-size: 1.5em;
+		font-weight: 300;
+		height: 40%;
+	}
+
+	.transaction-info {
+		display: block;
+		font-size: 1em;
+		border-width: 2px;
+		padding-left: 30px;
+	}
+
+	.bottom-box h1 {
+		font-size: .8em;
+		padding-left: 30px;
+	}
+
+	.bottom-box td {
+		font-size: .6em;
+		padding: 1% .5%;
+	}
+
+	.bottom-box td.time-passed {
+		padding-left: 5%;
+	}
+
+	table {
+		width: 100%;
+	}
+
+	.transaction-border {
+		width: 100%;
+	  	height: 2px;
+	  	margin: 10px auto;
+	  	background: -webkit-linear-gradient(left, #47ACFB, #886fad); /* For Safari 5.1 to 6.0 */
+	  	background: -o-linear-gradient(right, #47ACFB, #886fad); /* For Opera 11.1 to 12.0 */
+	  	background: -moz-linear-gradient(right, #47ACFB, #886fad); /* For Firefox 3.6 to 15 */
+	  	background: linear-gradient(to right, #47ACFB, #886fad); /* Standard syntax */
+	}
+
+
+
+
+
+/****************************
+		MODAL
+****************************/
+
+#buy-btc, 
+#sell-btc, 
+#deposit-euro,
+#withdrawal-euro {
+	text-align: center;
+}
+
+#buy-btc input, 
+#sell-btc input, 
+#deposit-euro input,
+#withdrawal-euro input {
+	display: block;
+	margin: auto auto;
+	margin-top: 15px;
+}
+
+.form-label {
+	text-align: center;
+}
+
+#buy-btc .amount, 
+#sell-btc .amount, 
+#deposit-euro .amount,
+#withdrawal-euro .amount {
+	width: 100%;
+	border-style: none;
+	margin: auto auto;
+	margin-top: 20px;
+}
+
+#buy-btc #input-btc-address, 
+#buy-btc #input-amount, 
+#deposit-euro #input-amount,
+#withdrawal-euro #input-amount {
+	border-radius: 5px;
+	border-style: solid;
+	border-color: #886fad;
+	border-width: 1px;
+	text-align: center;
+	margin: 0 5px;
+}
+
+#buy-btc #input-btc-address, 
+#sell-btc #input-btc-address,
+#deposit-euro #input-btc-address,
+#withdrawal-euro #input-btc-address {
+	padding: 5px 0px;
+	width: 20%;
+	font-size: 1.25em;
+}
+
+.special-value {
+	display: inline-block;
+}
+
+#fee_div {
+	font-size: .75em;
+}
+
+.form-field-amount {
+	margin-top: 20px;sx
+}
+
+#buy-btc th, 
+#sell-btc th,
+#deposit-euro th,
+#withdrawal-euro th {
+	text-align: right;
+	padding-right: 5px;
+}
+
+#buy-btc td, 
+#sell-btc td,
+#deposit-euro td,
+#withdrawal-euro td {
+	text-align: left;
+	padding-left: 5px;
+}
+
+#buy-btc table, 
+#sell-btc table,
+#deposit-euro table,
+#withdrawal-euro table {
+	margin: auto auto;
+}
+
+.field.form-field.calculation {
+	padding-top: 10px;
+	font-size: .85em;
+}
+
+#buy-btc .converted, 
+#sell-btc .converted,
+#deposit-euro .converted,
+#withdrawal-euro .converted {
+	display: inline-block;
+}
+
+.field.form-field.available {
+	font-size: .8em;
+	padding-top: 15px;
+}
+
+#buy-btc #input-amount, 
+#sell-btc #input-amount,
+#deposit-euro #input-amount,
+#withdrawal-euro #input-amount {
+	display: inline-block;
+	width: 125px;
+}
+
+#buy-btc #button-submit, 
+#sell-btc #button-submit,
+#deposit-euro #button-submit,
+#withdrawal-euro #button-submit {
+	background: transparent;
+	border-style: solid;
+	border-radius: 5px;
+	padding: 4px 35px;
+	border-color: #886fad;
+	text-transform: uppercase;
+	color: #886fad;
+}
+
+#buy-btc .select, 
+#sell-btc .select,
+#deposit-euro .select,
+#withdrawal-euro .select {
+	background: transparent;
+	border-color: #886fad;
+}
+
+#simplemodal-overlay {
+	background-color:#000;
+}
+
+#simplemodal-container {
+	background-color:#fff; 
+	padding:12px; 
+	border-radius: 5px;
+}
+
+#buy-btc {
+	margin-top: 40px;
+}
+
+#sell-btc {
+	margin-top: 30px;
+}
+
+#buy-btc {
+	display: none;
+}
+
+#sell-btc {
+	display: none;
+}
+
+#deposit-euro {
+	width: 500px;
+	display: none;
+}
+
+#withdrawal-euro {
+	width: 500px;
+	display: none;
+}
+
+#share {
+	text-align: center;
+	margin-top: 30px;
+	display: none;
+}
+
+#share .btc-address {
+	margin-top: 20px;
+	font-size: .7em;
+}
+
+.social-share {
+	display: inline-block;
+	margin: auto auto;
+}
+
+.share-icon {
+	text-decoration: none;
+	display: inline-block;
+	height: 23px;
+	margin: 0 10px;
+}
+
+.social-share a {
+	text-decoration: none;
+}
+
+
+
+.social-share {
+	display: none;
+}
+
+
+
+
